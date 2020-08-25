@@ -2,8 +2,11 @@
   "name": "@r26d/absinthe-apollo-socket-relay",
   "version": "0.0.4",
   "description": "Absinthe Socket Relay",
-  "module": "dist/index.js",
-  "main": "src/index.js",
+  "module": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "main": "lib",
   "react-native": "src/index",
   "scripts": {
     "version": "nps version",
@@ -59,5 +62,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "d46f242b38d00ba6c49258f51143670846cfad10"
+  "gitHead": "1be0272a3d575014c35aeeb0bd4885c358a996a9"
 }

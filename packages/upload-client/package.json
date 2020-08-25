@@ -34,10 +34,12 @@
     "react",
     "native"
   ],
+  "module": "lib/index.js",
   "files": [
     "lib"
   ],
   "main": "lib",
+  "react-native": "src/index",
   "sideEffects": false,
   "engines": {
     "node": ">=8.10"
@@ -66,11 +68,10 @@
     "test:eslint": "eslint .",
     "test:prettier": "prettier '**/*.{json,yml,md}' -l",
     "test:size": "size-limit",
-    "prepublishOnly": "npm test",
     "fix": "npx eslint --fix src/index.js"
   },
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "d46f242b38d00ba6c49258f51143670846cfad10"
+  "gitHead": "1be0272a3d575014c35aeeb0bd4885c358a996a9"
 }
