@@ -25,9 +25,7 @@ const plugins = {
     }),
     commonjs: commonjs(),
     resolve: resolve({
-        customResolveOptions: {
-            moduleDirectory: srcDir
-        }
+        resolveOnly: [/core-js\/.*/]
     })
 };
 
@@ -38,12 +36,12 @@ const getCjsAndEsConfig = fileName => ({
             file: `${dirs.output}/${fileName}`,
             format: "es",
             sourcemap: true
-        },
-        {
-            file: `${dirs.compat}/cjs/${fileName}`,
-            format: "cjs",
-            sourcemap: true
         }
+        // {
+        //     file: `${dirs.compat}/cjs/${fileName}`,
+        //     format: "cjs",
+        //     sourcemap: true
+        // }
     ],
     plugins: [plugins.babel]
 });
@@ -60,11 +58,12 @@ const getUnscopedName = pkg => {
 export default [
     {
         input: `${dirs.input}/index.js`,
+        external: [/@babel\/runtime\/.*/ ],
         output: {
-            file: `${dirs.compat}/umd/index.js`,
-            format: "umd",
+            file: `${dirs.dist}/index.js`,
+            format: "es",
             name: pascalCase(getUnscopedName(pkg)),
-            sourcemap: "inline",
+            sourcemap: true,
             exports: "auto"
         },
         plugins: [plugins.babel, plugins.resolve, plugins.commonjs]

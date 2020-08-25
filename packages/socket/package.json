@@ -39,7 +39,7 @@
     "utils"
   ],
   "dependencies": {
-    "@babel/runtime": "7.11.2",
+    "@babel/runtime": "^7.11.2",
     "@jumpn/utils-array": "0.3.4",
     "@jumpn/utils-composite": "0.7.0",
     "@jumpn/utils-graphql": "0.6.0",
@@ -60,5 +60,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "8257a3203cfbdca15b7d4f644f2cc42365021e80"
+  "gitHead": "bd78352c82eb3b25897af31079d2a78e4a19ad76"
 }
