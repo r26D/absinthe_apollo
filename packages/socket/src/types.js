@@ -1,37 +1,3 @@
-//      
+//
 
-import {Channel, Socket as PhoenixSocket} from "phoenix";
-
-                                                         
-
-                        
-                   
-                              
-                                  
-                              
-   
-
-                                       
-                                         
-                                         
-                      
-   
-
-                                               
-            
-                                   
-                                 
-                        
-           
-              
-                                   
-                                 
-                      
-           
-              
-                                   
-                                
-          
-   
-
-                                                                         
+import { Channel, Socket as PhoenixSocket } from 'phoenix'

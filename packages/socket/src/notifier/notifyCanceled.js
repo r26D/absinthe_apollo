@@ -1,16 +1,11 @@
-//      
+//
 
-import observerNotifyAll from "./observer/notifyAll";
+import observerNotifyAll from './observer/notifyAll'
 
-                                             
+const notifyCanceled = (notifier, event) => {
+  observerNotifyAll(notifier.canceledObservers, event)
 
-const notifyCanceled =                                   (
-  notifier                             ,
-  event       
-) => {
-  observerNotifyAll(notifier.canceledObservers, event);
+  return notifier
+}
 
-  return notifier;
-};
-
-export default notifyCanceled;
+export default notifyCanceled

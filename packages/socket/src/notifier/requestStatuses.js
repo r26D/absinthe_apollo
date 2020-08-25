@@ -1,15 +1,11 @@
-//      
+//
 
 const requestStatuses = {
-  canceled: ("canceled"            ),
-  canceling: ("canceling"             ),
-  pending: ("pending"           ),
-  sent: ("sent"        ),
-  sending: ("sending"           )
-};
+  canceled: 'canceled',
+  canceling: 'canceling',
+  pending: 'pending',
+  sent: 'sent',
+  sending: 'sending'
+}
 
-                                                     
-
-export default requestStatuses;
-
-                            
+export default requestStatuses

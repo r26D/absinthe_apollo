@@ -36,9 +36,9 @@ Creates a Fetcher using the given arguments
 
 #### Parameters
 
--   `apiUrl` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
--   `subscriptionsClient` **SubscriptionClient** 
--   `subscriptionSentMessage` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+- `apiUrl` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+- `subscriptionsClient` **SubscriptionClient**
+- `subscriptionSentMessage` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
 ## License
 

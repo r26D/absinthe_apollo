@@ -1,12 +1,12 @@
-
 const {
-  ApolloLink, Observable,
+  ApolloLink,
+  Observable,
   selectURI,
   selectHttpOptionsAndBody,
   fallbackHttpConfig,
   serializeFetchParameter,
   createSignalIfSupported,
-  parseAndCheckHttpResponse
+  parseAndCheckHttpResponse,
 } = require('@apollo/client')
 const { extractFiles, ReactNativeFile } = require('extract-files')
 const lodashSet = require('lodash/set')
@@ -101,16 +101,16 @@ exports.createUploadLink = ({
   fetchOptions,
   credentials,
   headers,
-  includeExtensions
+  includeExtensions,
 } = {}) => {
   const linkConfig = {
     http: { includeExtensions },
     options: fetchOptions,
     credentials,
-    headers
+    headers,
   }
 
-  return new ApolloLink(operation => {
+  return new ApolloLink((operation) => {
     const uri = selectURI(operation, fetchUri)
     const context = operation.getContext()
 
@@ -120,7 +120,7 @@ exports.createUploadLink = ({
     const {
       // From Apollo Client config.
       clientAwareness: { name, version } = {},
-      headers
+      headers,
     } = context
 
     const contextConfig = {
@@ -131,8 +131,8 @@ exports.createUploadLink = ({
         // Client awareness headers are context overridable.
         ...(name && { 'apollographql-client-name': name }),
         ...(version && { 'apollographql-client-version': version }),
-        ...headers
-      }
+        ...headers,
+      },
     }
 
     const { options, body } = selectHttpOptionsAndBody(
@@ -165,7 +165,7 @@ exports.createUploadLink = ({
       files.forEach((uses, file) => {
         const fileShortId = shortid.generate()
         form.append(fileShortId, file)
-        uses.forEach(ref => {
+        uses.forEach((ref) => {
           const usage = ref.split('.')
           usage.shift() //Removes the variables from the path
           lodashSet(variables, usage, fileShortId)
@@ -175,7 +175,7 @@ exports.createUploadLink = ({
       options.body = form
     } else options.body = payload
 
-    return new Observable(observer => {
+    return new Observable((observer) => {
       // If no abort controller signal was provided in fetch options, and the
       // environment supports the AbortController interface, create and use a
       // default abort controller.
@@ -189,17 +189,17 @@ exports.createUploadLink = ({
       }
 
       linkFetch(uri, options)
-        .then(response => {
+        .then((response) => {
           // Forward the response on the context.
           operation.setContext({ response })
           return response
         })
         .then(parseAndCheckHttpResponse(operation))
-        .then(result => {
+        .then((result) => {
           observer.next(result)
           observer.complete()
         })
-        .catch(error => {
+        .catch((error) => {
           if (error.name === 'AbortError')
             // Fetch was aborted.
             return

@@ -1,10 +1,10 @@
-import {isFileList, isObject, isUploadFile} from './validators'
+import { isFileList, isObject, isUploadFile } from './validators'
 
 const extractFiles = (variables) => {
   const files = []
   const walkTree = (tree, path = []) => {
     const mapped = Array.isArray(tree) ? tree : Object.assign({}, tree)
-    Object.keys(mapped).forEach(key => {
+    Object.keys(mapped).forEach((key) => {
       const value = mapped[key]
       const name = [...path, key].join('.')
 
@@ -13,7 +13,7 @@ const extractFiles = (variables) => {
           ? Array.prototype.slice.call(value)
           : value
 
-        files.push({file, name})
+        files.push({ file, name })
         mapped[key] = name
       } else if (isObject(value)) {
         mapped[key] = walkTree(value, name)
@@ -25,9 +25,8 @@ const extractFiles = (variables) => {
 
   return {
     files,
-    variables: walkTree(variables),
+    variables: walkTree(variables)
   }
-
 }
 
 export default extractFiles

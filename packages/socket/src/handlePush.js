@@ -1,13 +1,11 @@
-//      
+//
 
-import {Push} from "phoenix";
+import { Push } from 'phoenix'
 
-                                         
-
-const handlePush = (push      , handler                  ) =>
+const handlePush = (push, handler) =>
   push
-    .receive("ok", handler.onSucceed)
-    .receive("error", handler.onError)
-    .receive("timeout", handler.onTimeout);
+    .receive('ok', handler.onSucceed)
+    .receive('error', handler.onError)
+    .receive('timeout', handler.onTimeout)
 
-export default handlePush;
+export default handlePush

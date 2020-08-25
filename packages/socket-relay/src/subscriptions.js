@@ -1,11 +1,5 @@
-//      
+//
 
-                                            
-                                               
+const subscriptions = new WeakMap()
 
-const subscriptions          
-             
-                        
-  = new WeakMap();
-
-export default subscriptions;
+export default subscriptions

@@ -1,18 +1,12 @@
-//      
+//
 
-import notifierRefresh from "./notifier/refresh";
-import updateNotifiers from "./updateNotifiers";
+import notifierRefresh from './notifier/refresh'
+import updateNotifiers from './updateNotifiers'
 
-                                            
-                                               
+const refreshNotifier = (absintheSocket, notifier) => {
+  updateNotifiers(absintheSocket, notifierRefresh(notifier))
 
-const refreshNotifier =                                   (
-  absintheSocket                ,
-  notifier                             
-) => {
-  updateNotifiers(absintheSocket, notifierRefresh(notifier));
+  return notifier
+}
 
-  return notifier;
-};
-
-export default refreshNotifier;
+export default refreshNotifier

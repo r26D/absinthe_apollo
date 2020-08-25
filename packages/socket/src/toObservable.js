@@ -1,22 +1,9 @@
-//      
+//
 
-import Observable from "zen-observable";
+import Observable from 'zen-observable'
 
-import notifierFind from "./notifier/find";
-import observe from "./observe";
-
-                                            
-                                                         
-
-                                                   
-                                                                
-                                                                
-                
-                                   
-                                           
-                                          
-           
-   
+import notifierFind from './notifier/find'
+import observe from './observe'
 
 // prettier-ignore
 const getUnsubscriber = (absintheSocket, {request}, observer, unsubscribe) =>
@@ -26,19 +13,19 @@ const getUnsubscriber = (absintheSocket, {request}, observer, unsubscribe) =>
     unsubscribe(absintheSocket, notifier, notifier ? observer: undefined);
   };
 
-const onResult = ({operationType}, observableObserver) => result => {
-  observableObserver.next(result);
+const onResult = ({ operationType }, observableObserver) => (result) => {
+  observableObserver.next(result)
 
-  if (operationType !== "subscription") {
-    observableObserver.complete();
+  if (operationType !== 'subscription') {
+    observableObserver.complete()
   }
-};
+}
 
 const createObserver = (notifier, handlers, observableObserver) => ({
   ...handlers,
   onAbort: observableObserver.error.bind(observableObserver),
   onResult: onResult(notifier, observableObserver)
-});
+})
 
 /**
  * Creates an Observable that will follow the given notifier
@@ -69,20 +56,20 @@ const createObserver = (notifier, handlers, observableObserver) => ({
  *   unsubscribe: unobserveOrCancelIfNeeded
  * });
  */
-const toObservable =                                   (
-  absintheSocket                ,
-  notifier                             ,
-  {unsubscribe, ...handlers}                                     = {}
+const toObservable = (
+  absintheSocket,
+  notifier,
+  { unsubscribe, ...handlers } = {}
 ) =>
-  new Observable(observableObserver => {
-    const observer = createObserver(notifier, handlers, observableObserver);
+  new Observable((observableObserver) => {
+    const observer = createObserver(notifier, handlers, observableObserver)
 
-    observe(absintheSocket, notifier, observer);
+    observe(absintheSocket, notifier, observer)
 
     return (
       unsubscribe &&
       getUnsubscriber(absintheSocket, notifier, observer, unsubscribe)
-    );
-  });
+    )
+  })
 
-export default toObservable;
+export default toObservable

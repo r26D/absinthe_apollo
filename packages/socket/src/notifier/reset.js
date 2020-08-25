@@ -1,18 +1,14 @@
-//      
+//
 
-import flushCanceled from "./flushCanceled";
-import requestStatuses from "./requestStatuses";
+import flushCanceled from './flushCanceled'
+import requestStatuses from './requestStatuses'
 
-                                      
-
-const reset =                                   (
-  notifier                             
-) =>
+const reset = (notifier) =>
   flushCanceled({
     ...notifier,
     isActive: true,
     requestStatus: requestStatuses.pending,
     subscriptionId: undefined
-  });
+  })
 
-export default reset;
+export default reset

@@ -47,7 +47,7 @@
     "zen-observable": "0.8.11"
   },
   "devDependencies": {
-     "nps": "5.9.3"
+    "nps": "5.9.3"
   },
   "peerDependencies": {
     "phoenix": "^1.4.0"

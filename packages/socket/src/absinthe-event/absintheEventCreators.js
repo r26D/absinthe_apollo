@@ -1,21 +1,15 @@
-//      
+//
 
-import absintheEventNames from "./absintheEventNames";
+import absintheEventNames from './absintheEventNames'
 
-                                                                        
-
-const createAbsintheUnsubscribeEvent = (
-  payload                                                   
-)                           => ({
+const createAbsintheUnsubscribeEvent = (payload) => ({
   payload,
   name: absintheEventNames.unsubscribe
-});
+})
 
-const createAbsintheDocEvent =                           (
-  payload                                                      
-)                              => ({
+const createAbsintheDocEvent = (payload) => ({
   payload,
   name: absintheEventNames.doc
-});
+})
 
-export {createAbsintheDocEvent, createAbsintheUnsubscribeEvent};
+export { createAbsintheDocEvent, createAbsintheUnsubscribeEvent }

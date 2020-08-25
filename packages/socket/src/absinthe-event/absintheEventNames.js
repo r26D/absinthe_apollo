@@ -1,12 +1,8 @@
-//      
+//
 
 const absintheEventNames = {
-  doc: ("doc"       ),
-  unsubscribe: ("unsubscribe"               )
-};
+  doc: 'doc',
+  unsubscribe: 'unsubscribe'
+}
 
-                                                            
-
-export default absintheEventNames;
-
-                                
+export default absintheEventNames

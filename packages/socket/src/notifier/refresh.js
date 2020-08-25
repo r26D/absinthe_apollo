@@ -1,18 +1,14 @@
-//      
+//
 
-import {replace as arrayReplace} from "@jumpn/utils-array";
+import { replace as arrayReplace } from '@jumpn/utils-array'
 
-import findIndex from "./findIndex";
+import findIndex from './findIndex'
 
-                                      
-
-const refresh = (notifier                    ) => (
-  notifiers                           
-) =>
+const refresh = (notifier) => (notifiers) =>
   arrayReplace(
-    findIndex(notifiers, "request", notifier.request),
+    findIndex(notifiers, 'request', notifier.request),
     [notifier],
     notifiers
-  );
+  )
 
-export default refresh;
+export default refresh

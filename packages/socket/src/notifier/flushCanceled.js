@@ -1,20 +1,16 @@
-//      
+//
 
-import notifyCanceled from "./notifyCanceled";
-import {createCancelEvent} from "./event/eventCreators";
+import notifyCanceled from './notifyCanceled'
+import { createCancelEvent } from './event/eventCreators'
 
-                                      
-
-const clearCanceled = notifier => ({
+const clearCanceled = (notifier) => ({
   ...notifier,
   canceledObservers: []
-});
+})
 
-const flushCanceled =                                        (
-  notifier                             
-) =>
+const flushCanceled = (notifier) =>
   notifier.canceledObservers.length > 0
     ? clearCanceled(notifyCanceled(notifier, createCancelEvent()))
-    : notifier;
+    : notifier
 
-export default flushCanceled;
+export default flushCanceled

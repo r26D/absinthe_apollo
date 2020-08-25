@@ -39,35 +39,35 @@
 
 ## Features
 
--   Immutable functional API
-    > All received and returned objects with the exception of AbsintheSocket
-    >   instances (there are plans to make this immutable too) are treated in an
-    >   immutable way. Objects have no methods and instead we provide independant
-    >   stateless functions to interact with them.
--   Lazy connect / join
-    > If provided phoenix socket instance is not connected, then instead of
-    >   connecting at creation time, connection will be established on the next
-    >   invocation of [send](#send).
--   Handle pending operations on connection lost
-    > Pending mutations will be aborted, queries will be resent, and subscriptions
-    >   reestablished.
--   Cancellable requests
-    > Calling [cancel](#cancel) removes given notifier from absintheSocket instance
-    >   and sends a Cancel event to all its observers and unsubscribes in case it
-    >   holds a subscription request.
--   Operations deduplication
-    > If an already sent request is given to [send](#send), then instead of sending
-    >   it again, the notifier associated with it will be returned.
--   Observer support of recoverable errors
-    > Since connection lost is handled, then two events needs to exist to represent
-    >   this fact: Error (recoverable), Abort (unrecoverable).
--   Multiple observers per request
-    > Calling [send](#send) returns a notifier which allows attaching any number of
-    >   observers that will be notified when result arrives.
--   Observer interaction depending on operation type
-    > For the case of subscriptions, _Start_ event is dispatched when the
-    >   subscription is established, while for the other types
-    >   (queries and mutations), when the request is sent.
+- Immutable functional API
+  > All received and returned objects with the exception of AbsintheSocket
+  > instances (there are plans to make this immutable too) are treated in an
+  > immutable way. Objects have no methods and instead we provide independant
+  > stateless functions to interact with them.
+- Lazy connect / join
+  > If provided phoenix socket instance is not connected, then instead of
+  > connecting at creation time, connection will be established on the next
+  > invocation of [send](#send).
+- Handle pending operations on connection lost
+  > Pending mutations will be aborted, queries will be resent, and subscriptions
+  > reestablished.
+- Cancellable requests
+  > Calling [cancel](#cancel) removes given notifier from absintheSocket instance
+  > and sends a Cancel event to all its observers and unsubscribes in case it
+  > holds a subscription request.
+- Operations deduplication
+  > If an already sent request is given to [send](#send), then instead of sending
+  > it again, the notifier associated with it will be returned.
+- Observer support of recoverable errors
+  > Since connection lost is handled, then two events needs to exist to represent
+  > this fact: Error (recoverable), Abort (unrecoverable).
+- Multiple observers per request
+  > Calling [send](#send) returns a notifier which allows attaching any number of
+  > observers that will be notified when result arrives.
+- Observer interaction depending on operation type
+  > For the case of subscriptions, _Start_ event is dispatched when the
+  > subscription is established, while for the other types
+  > (queries and mutations), when the request is sent.
 
 ## Installation
 
@@ -136,18 +136,18 @@ unsubscribing in case it holds a subscription request
 
 #### Parameters
 
--   `absintheSocket` **AbsintheSocket** 
--   `notifier` **Notifier&lt;any, any>** 
+- `absintheSocket` **AbsintheSocket**
+- `notifier` **Notifier&lt;any, any>**
 
 #### Examples
 
 ```javascript
-import * as withAbsintheSocket from "@absinthe/socket";
+import * as withAbsintheSocket from '@absinthe/socket'
 
-withAbsintheSocket.cancel(absintheSocket, notifier);
+withAbsintheSocket.cancel(absintheSocket, notifier)
 ```
 
-Returns **AbsintheSocket** 
+Returns **AbsintheSocket**
 
 ### create
 
@@ -155,20 +155,20 @@ Creates an Absinthe Socket using the given Phoenix Socket instance
 
 #### Parameters
 
--   `phoenixSocket` **PhoenixSocket** 
+- `phoenixSocket` **PhoenixSocket**
 
 #### Examples
 
 ```javascript
-import * as withAbsintheSocket from "@absinthe/socket";
-import {Socket as PhoenixSocket} from "phoenix";
+import * as withAbsintheSocket from '@absinthe/socket'
+import { Socket as PhoenixSocket } from 'phoenix'
 
 const absintheSocket = withAbsintheSocket.create(
-  new PhoenixSocket("ws://localhost:4000/socket")
-);
+  new PhoenixSocket('ws://localhost:4000/socket')
+)
 ```
 
-Returns **AbsintheSocket** 
+Returns **AbsintheSocket**
 
 ### observe
 
@@ -176,23 +176,23 @@ Observes given notifier using the provided observer
 
 #### Parameters
 
--   `absintheSocket` **AbsintheSocket** 
--   `notifier` **Notifier&lt;Result, Variables>** 
--   `observer` **Observer&lt;Result, Variables>** 
+- `absintheSocket` **AbsintheSocket**
+- `notifier` **Notifier&lt;Result, Variables>**
+- `observer` **Observer&lt;Result, Variables>**
 
 #### Examples
 
 ```javascript
-import * as withAbsintheSocket from "@absinthe/socket"
+import * as withAbsintheSocket from '@absinthe/socket'
 
-const logEvent = eventName => (...args) => console.log(eventName, ...args);
+const logEvent = (eventName) => (...args) => console.log(eventName, ...args)
 
 const updatedNotifier = withAbsintheSocket.observe(absintheSocket, notifier, {
-  onAbort: logEvent("abort"),
-  onError: logEvent("error"),
-  onStart: logEvent("open"),
-  onResult: logEvent("result")
-});
+  onAbort: logEvent('abort'),
+  onError: logEvent('error'),
+  onStart: logEvent('open'),
+  onResult: logEvent('result')
+})
 ```
 
 ### send
@@ -202,13 +202,13 @@ Sends given request and returns an object (notifier) to track its progress
 
 #### Parameters
 
--   `absintheSocket` **AbsintheSocket** 
--   `request` **GqlRequest&lt;Variables>** 
+- `absintheSocket` **AbsintheSocket**
+- `request` **GqlRequest&lt;Variables>**
 
 #### Examples
 
 ```javascript
-import * as withAbsintheSocket from "@absinthe/socket";
+import * as withAbsintheSocket from '@absinthe/socket'
 
 const operation = `
   subscription userSubscription($userId: ID!) {
@@ -217,18 +217,18 @@ const operation = `
       name
     }
   }
-`;
+`
 
 // This example uses a subscription, but the functionallity is the same for
 // all operation types (queries, mutations and subscriptions)
 
 const notifier = withAbsintheSocket.send(absintheSocket, {
   operation,
-  variables: {userId: 10}
-});
+  variables: { userId: 10 }
+})
 ```
 
-Returns **Notifier&lt;Result, Variables>** 
+Returns **Notifier&lt;Result, Variables>**
 
 ### toObservable
 
@@ -236,35 +236,35 @@ Creates an Observable that will follow the given notifier
 
 #### Parameters
 
--   `absintheSocket` **AbsintheSocket** 
--   `notifier` **Notifier&lt;Result, Variables>** 
--   `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?**  (optional, default `{}`)
-    -   `options.unsubscribe` **function (): [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)?** 
-    -   `options.onError` **function (error: [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)): [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)?** 
-    -   `options.onStart` **function (notifier: Notifier&lt;Result, Variables>): [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)?** 
-    -   `options.handlers` **...any** 
+- `absintheSocket` **AbsintheSocket**
+- `notifier` **Notifier&lt;Result, Variables>**
+- `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** (optional, default `{}`)
+  - `options.unsubscribe` **function (): [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)?**
+  - `options.onError` **function (error: [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)): [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)?**
+  - `options.onStart` **function (notifier: Notifier&lt;Result, Variables>): [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)?**
+  - `options.handlers` **...any**
 
 #### Examples
 
 ```javascript
-import * as withAbsintheSocket from "@absinthe/socket";
+import * as withAbsintheSocket from '@absinthe/socket'
 
 const unobserveOrCancelIfNeeded = (absintheSocket, notifier, observer) => {
   if (notifier && observer) {
-    withAbsintheSocket.unobserveOrCancel(absintheSocket, notifier, observer);
+    withAbsintheSocket.unobserveOrCancel(absintheSocket, notifier, observer)
   }
-};
+}
 
-const logEvent = eventName => (...args) => console.log(eventName, ...args);
+const logEvent = (eventName) => (...args) => console.log(eventName, ...args)
 
 const observable = withAbsintheSocket.toObservable(absintheSocket, notifier, {
-  onError: logEvent("error"),
-  onStart: logEvent("open"),
+  onError: logEvent('error'),
+  onStart: logEvent('open'),
   unsubscribe: unobserveOrCancelIfNeeded
-});
+})
 ```
 
-Returns **Observable** 
+Returns **Observable**
 
 ### unobserve
 
@@ -272,19 +272,19 @@ Detaches observer from notifier
 
 #### Parameters
 
--   `absintheSocket` **AbsintheSocket** 
--   `notifier` **Notifier&lt;any, any>** 
--   `observer` **Observer&lt;any, any>** 
+- `absintheSocket` **AbsintheSocket**
+- `notifier` **Notifier&lt;any, any>**
+- `observer` **Observer&lt;any, any>**
 
 #### Examples
 
 ```javascript
-import * as withAbsintheSocket from "@absinthe/socket";
+import * as withAbsintheSocket from '@absinthe/socket'
 
-withAbsintheSocket.unobserve(absintheSocket, notifier, observer);
+withAbsintheSocket.unobserve(absintheSocket, notifier, observer)
 ```
 
-Returns **AbsintheSocket** 
+Returns **AbsintheSocket**
 
 ### unobserveOrCancel
 
@@ -293,16 +293,16 @@ detaches given observer from notifier otherwise
 
 #### Parameters
 
--   `absintheSocket` **AbsintheSocket** 
--   `notifier` **Notifier&lt;Result, Variables>** 
--   `observer` **Observer&lt;Result, Variables>** 
+- `absintheSocket` **AbsintheSocket**
+- `notifier` **Notifier&lt;Result, Variables>**
+- `observer` **Observer&lt;Result, Variables>**
 
 #### Examples
 
 ```javascript
-import * as withAbsintheSocket from "@absinthe/socket";
+import * as withAbsintheSocket from '@absinthe/socket'
 
-withAbsintheSocket.unobserve(absintheSocket, notifier, observer);
+withAbsintheSocket.unobserve(absintheSocket, notifier, observer)
 ```
 
 ## License

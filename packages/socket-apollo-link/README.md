@@ -35,13 +35,13 @@
 ```javascript
 // @flow
 
-import * as AbsintheSocket from "@absinthe/socket";
-import {createAbsintheSocketLink} from "@absinthe/socket-apollo-link";
-import {Socket as PhoenixSocket} from "phoenix";
+import * as AbsintheSocket from '@absinthe/socket'
+import { createAbsintheSocketLink } from '@absinthe/socket-apollo-link'
+import { Socket as PhoenixSocket } from 'phoenix'
 
-export default createAbsintheSocketLink(AbsintheSocket.create(
-  new PhoenixSocket("ws://localhost:4000/socket")
-));
+export default createAbsintheSocketLink(
+  AbsintheSocket.create(new PhoenixSocket('ws://localhost:4000/socket'))
+)
 ```
 
 2.  Send all the operations using AbsintheSocketLink
@@ -49,16 +49,16 @@ export default createAbsintheSocketLink(AbsintheSocket.create(
 ```javascript
 // @flow
 
-import ApolloClient from "apollo-client";
-import {InMemoryCache} from "apollo-cache-inmemory";
+import ApolloClient from 'apollo-client'
+import { InMemoryCache } from 'apollo-cache-inmemory'
 
 // see example 1
-import absintheSocketLink from "./absinthe-socket-link";
+import absintheSocketLink from './absinthe-socket-link'
 
 const client = new ApolloClient({
   link: absintheSocketLink,
   cache: new InMemoryCache()
-});
+})
 ```
 
 3.  Subscribe using AbsintheSocketLink and send queries and mutations using HttpLink
@@ -66,25 +66,25 @@ const client = new ApolloClient({
 ```javascript
 // @flow
 
-import ApolloClient from "apollo-client";
-import {createHttpLink} from "apollo-link-http";
-import {hasSubscription} from "@jumpn/utils-graphql";
-import {InMemoryCache} from "apollo-cache-inmemory";
-import {split} from "apollo-link";
+import ApolloClient from 'apollo-client'
+import { createHttpLink } from 'apollo-link-http'
+import { hasSubscription } from '@jumpn/utils-graphql'
+import { InMemoryCache } from 'apollo-cache-inmemory'
+import { split } from 'apollo-link'
 
 // see example 1
-import absintheSocketLink from "./absinthe-socket-link";
+import absintheSocketLink from './absinthe-socket-link'
 
 const link = split(
-  operation => hasSubscription(operation.query),
+  (operation) => hasSubscription(operation.query),
   absintheSocketLink,
-  createHttpLink({uri: "/graphql"})
-);
+  createHttpLink({ uri: '/graphql' })
+)
 
 const client = new ApolloClient({
   link,
   cache: new InMemoryCache()
-});
+})
 ```
 
 ## API
@@ -98,18 +98,18 @@ AbsintheSocket instance
 
 #### Parameters
 
--   `absintheSocket` **AbsintheSocket** 
--   `onError` **$ElementType&lt;Observer&lt;Result, Variables>, `"onError"`>** 
--   `onStart` **$ElementType&lt;Observer&lt;Result, Variables>, `"onStart"`>** 
+- `absintheSocket` **AbsintheSocket**
+- `onError` **\$ElementType&lt;Observer&lt;Result, Variables>, `"onError"`>**
+- `onStart` **\$ElementType&lt;Observer&lt;Result, Variables>, `"onStart"`>**
 
 ## References
 
--   [Absinthe Phoenix Socket](https://github.com/absinthe-graphql/absinthe-socket/tree/master/packages/socket)
--   **Apollo Link**
-    -   [Apollo Client](http://apollo-link-docs.netlify.com/docs/link/#apollo-client)
-    -   [Terminating Links](http://apollo-link-docs.netlify.com/docs/link/overview.html#terminating)
-    -   [Directional Composition](http://apollo-link-docs.netlify.com/docs/link/composition.html#directional)
-    -   [Http Link](http://apollo-link-docs.netlify.com/docs/link/links/http.html)
+- [Absinthe Phoenix Socket](https://github.com/absinthe-graphql/absinthe-socket/tree/master/packages/socket)
+- **Apollo Link**
+  - [Apollo Client](http://apollo-link-docs.netlify.com/docs/link/#apollo-client)
+  - [Terminating Links](http://apollo-link-docs.netlify.com/docs/link/overview.html#terminating)
+  - [Directional Composition](http://apollo-link-docs.netlify.com/docs/link/composition.html#directional)
+  - [Http Link](http://apollo-link-docs.netlify.com/docs/link/links/http.html)
 
 ## License
 

@@ -1,10 +1,7 @@
-//      
+//
 
-import notifierObserve from "./notifier/observe";
-import refreshNotifier from "./refreshNotifier";
-
-                                            
-                                                         
+import notifierObserve from './notifier/observe'
+import refreshNotifier from './refreshNotifier'
 
 /**
  * Observes given notifier using the provided observer
@@ -21,10 +18,7 @@ import refreshNotifier from "./refreshNotifier";
  *   onResult: logEvent("result")
  * });
  */
-const observe =                                   (
-  absintheSocket                ,
-  notifier                             ,
-  observer                             
-) => refreshNotifier(absintheSocket, notifierObserve(notifier, observer));
+const observe = (absintheSocket, notifier, observer) =>
+  refreshNotifier(absintheSocket, notifierObserve(notifier, observer))
 
-export default observe;
+export default observe

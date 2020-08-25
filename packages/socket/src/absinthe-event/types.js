@@ -1,28 +1,3 @@
-//      
+//
 
-                                                                            
-
-import absintheEventNames from "./absintheEventNames";
-
-                                                            
-
-                                                             
-             
-                  
-   
-
-                                                  
-                                        
-   
-                          
-   
-  
-
-                                                                    
-                                
-                             
-  
-
-                                                                      
-
-                                                                        
+import absintheEventNames from './absintheEventNames'

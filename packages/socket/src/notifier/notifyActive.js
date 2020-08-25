@@ -1,16 +1,11 @@
-//      
+//
 
-import observerNotifyAll from "./observer/notifyAll";
+import observerNotifyAll from './observer/notifyAll'
 
-                                             
+const notifyActive = (notifier, event) => {
+  observerNotifyAll(notifier.activeObservers, event)
 
-const notifyActive =                                   (
-  notifier                             ,
-  event       
-) => {
-  observerNotifyAll(notifier.activeObservers, event);
+  return notifier
+}
 
-  return notifier;
-};
-
-export default notifyActive;
+export default notifyActive

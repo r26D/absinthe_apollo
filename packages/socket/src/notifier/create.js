@@ -1,12 +1,8 @@
-//      
+//
 
-import {getOperationType} from "@jumpn/utils-graphql";
+import { getOperationType } from '@jumpn/utils-graphql'
 
-                                                                      
-
-import requestStatuses from "./requestStatuses";
-
-                                      
+import requestStatuses from './requestStatuses'
 
 const createUsing = (request, operationType) => ({
   operationType,
@@ -16,11 +12,9 @@ const createUsing = (request, operationType) => ({
   isActive: true,
   requestStatus: requestStatuses.pending,
   subscriptionId: undefined
-});
+})
 
-const create =                           (
-  request                       
-)                                     =>
-  createUsing(request, getOperationType(request.operation));
+const create = (request) =>
+  createUsing(request, getOperationType(request.operation))
 
-export default create;
+export default create

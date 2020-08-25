@@ -1,61 +1,56 @@
-//      
+//
 
-import {append} from "@jumpn/utils-array";
+import { append } from '@jumpn/utils-array'
 
-                                                                      
+import joinChannel from './joinChannel'
+import notifierCreate from './notifier/create'
+import notifierFind from './notifier/find'
+import notifierFlushCanceled from './notifier/flushCanceled'
+import notifierReactivate from './notifier/reactivate'
+import pushRequest from './pushRequest'
+import refreshNotifier from './refreshNotifier'
+import requestStatuses from './notifier/requestStatuses'
+import updateNotifiers from './updateNotifiers'
 
-import joinChannel from "./joinChannel";
-import notifierCreate from "./notifier/create";
-import notifierFind from "./notifier/find";
-import notifierFlushCanceled from "./notifier/flushCanceled";
-import notifierReactivate from "./notifier/reactivate";
-import pushRequest from "./pushRequest";
-import refreshNotifier from "./refreshNotifier";
-import requestStatuses from "./notifier/requestStatuses";
-import updateNotifiers from "./updateNotifiers";
-
-                                            
-                                               
-
-const connectOrJoinChannel = absintheSocket => {
+const connectOrJoinChannel = (absintheSocket) => {
   if (absintheSocket.phoenixSocket.isConnected()) {
-    joinChannel(absintheSocket);
+    joinChannel(absintheSocket)
   } else {
     // socket ignores connect calls if a connection has already been created
-    absintheSocket.phoenixSocket.connect();
+    absintheSocket.phoenixSocket.connect()
   }
-};
+}
 
 const sendNew = (absintheSocket, request) => {
-  const notifier = notifierCreate(request);
+  const notifier = notifierCreate(request)
 
-  updateNotifiers(absintheSocket, append([notifier]));
+  updateNotifiers(absintheSocket, append([notifier]))
 
   if (absintheSocket.channelJoinCreated) {
-    pushRequest(absintheSocket, notifier);
+    pushRequest(absintheSocket, notifier)
   } else {
-    connectOrJoinChannel(absintheSocket);
+    connectOrJoinChannel(absintheSocket)
   }
 
-  return notifier;
-};
+  return notifier
+}
 
 const updateCanceledReactivate = (absintheSocket, notifier) =>
-  refreshNotifier(absintheSocket, notifierReactivate(notifier));
+  refreshNotifier(absintheSocket, notifierReactivate(notifier))
 
 const updateCanceled = (absintheSocket, notifier) =>
   notifier.requestStatus === requestStatuses.sending
     ? updateCanceledReactivate(absintheSocket, notifierFlushCanceled(notifier))
-    : updateCanceledReactivate(absintheSocket, notifier);
+    : updateCanceledReactivate(absintheSocket, notifier)
 
 const updateIfCanceled = (absintheSocket, notifier) =>
-  notifier.isActive ? notifier : updateCanceled(absintheSocket, notifier);
+  notifier.isActive ? notifier : updateCanceled(absintheSocket, notifier)
 
 const getExistentIfAny = (absintheSocket, request) => {
-  const notifier = notifierFind(absintheSocket.notifiers, "request", request);
+  const notifier = notifierFind(absintheSocket.notifiers, 'request', request)
 
-  return notifier && updateIfCanceled(absintheSocket, notifier);
-};
+  return notifier && updateIfCanceled(absintheSocket, notifier)
+}
 
 /**
  * Sends given request and returns an object (notifier) to track its progress
@@ -81,10 +76,7 @@ const getExistentIfAny = (absintheSocket, request) => {
  *   variables: {userId: 10}
  * });
  */
-const send =                                   (
-  absintheSocket                ,
-  request                       
-)                              =>
-  getExistentIfAny(absintheSocket, request) || sendNew(absintheSocket, request);
+const send = (absintheSocket, request) =>
+  getExistentIfAny(absintheSocket, request) || sendNew(absintheSocket, request)
 
-export default send;
+export default send

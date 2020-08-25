@@ -1,39 +1,28 @@
-//      
+//
 
-import eventNames from "./eventNames";
+import eventNames from './eventNames'
 
-             
-             
-              
-             
-           
-              
-            
-                  
+const createStartEvent = (payload) => ({ payload, name: eventNames.start })
 
-const createStartEvent =                              (
-  payload         
-)                      => ({payload, name: eventNames.start});
-
-const createResultEvent =         (payload        )                      => ({
+const createResultEvent = (payload) => ({
   payload,
   name: eventNames.result
-});
+})
 
-const createErrorEvent = (payload       )             => ({
+const createErrorEvent = (payload) => ({
   payload,
   name: eventNames.error
-});
+})
 
-const createCancelEvent = ()              => ({
+const createCancelEvent = () => ({
   name: eventNames.cancel,
   payload: undefined
-});
+})
 
-const createAbortEvent = (payload       )             => ({
+const createAbortEvent = (payload) => ({
   payload,
   name: eventNames.abort
-});
+})
 
 export {
   createStartEvent,
@@ -41,4 +30,4 @@ export {
   createErrorEvent,
   createCancelEvent,
   createAbortEvent
-};
+}

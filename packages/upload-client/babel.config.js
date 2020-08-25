@@ -5,9 +5,9 @@ module.exports = {
       '@babel/env',
       {
         shippedProposals: true,
-        loose: true
-      }
-    ]
+        loose: true,
+      },
+    ],
   ],
-  plugins: ['@babel/transform-runtime']
+  plugins: ['@babel/transform-runtime'],
 }

@@ -1,12 +1,9 @@
-//      
+//
 
-import notifyActive from "./notifyActive";
-import {createStartEvent} from "./event/eventCreators";
+import notifyActive from './notifyActive'
+import { createStartEvent } from './event/eventCreators'
 
-                                      
+const notifyStartEvent = (notifier) =>
+  notifyActive(notifier, createStartEvent(notifier))
 
-const notifyStartEvent =                                   (
-  notifier                             
-) => notifyActive(notifier, createStartEvent(notifier));
-
-export default notifyStartEvent;
+export default notifyStartEvent
