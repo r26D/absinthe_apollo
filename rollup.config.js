@@ -65,7 +65,7 @@ export default [
             format: "umd",
             name: pascalCase(getUnscopedName(pkg)),
             sourcemap: "inline",
-            exports: "default"
+            exports: "auto"
         },
         plugins: [plugins.babel, plugins.resolve, plugins.commonjs]
     },
