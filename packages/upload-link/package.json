@@ -1,6 +1,6 @@
 {
   "name": "@r26d/absinthe-apollo-upload-link",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A network interface for Apollo that enables file-uploading to Absinthe back ends.",
   "module": "lib/index.js",
   "files": [
