@@ -1,6 +1,6 @@
 //
 
-import * as withAbsintheSocket from '@absinthe/socket'
+import * as withAbsintheSocket from ''@r26d/absinthe_apollo-socket''
 import { requestFromCompat } from '@jumpn/utils-graphql'
 import { Socket as PhoenixSocket } from 'phoenix'
 

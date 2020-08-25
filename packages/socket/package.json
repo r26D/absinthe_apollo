@@ -39,18 +39,23 @@
     "utils"
   ],
   "dependencies": {
-    "@babel/runtime": "7.2.0",
+    "@babel/runtime": "7.11.2",
     "@jumpn/utils-array": "0.3.4",
     "@jumpn/utils-composite": "0.7.0",
     "@jumpn/utils-graphql": "0.6.0",
-    "core-js": "2.6.0",
-    "zen-observable": "0.8.11"
+    "core-js": "^3.6.5",
+    "zen-observable": "0.8.15"
   },
   "devDependencies": {
-    "nps": "5.9.3"
+    "nps": "5.10.0",
+    "eslint": "7.7.0",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-prettier": "3.1.4"
   },
   "peerDependencies": {
-    "phoenix": "^1.4.0"
+    "phoenix": "^1.5.0"
   },
   "publishConfig": {
     "access": "public"

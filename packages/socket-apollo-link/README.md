@@ -1,4 +1,4 @@
-# @absinthe/socket-apollo-link
+# @r26d/absinthe_apollo-socket-apollo-link
 
 > Absinthe Socket Apollo Link
 
@@ -22,11 +22,11 @@
 
 ### Using [npm](https://docs.npmjs.com/cli/npm)
 
-    $ npm install --save @absinthe/socket-apollo-link
+    $ npm install --save @r26d/absinthe_apollo-socket-apollo-link
 
 ### Using [yarn](https://yarnpkg.com)
 
-    $ yarn add @absinthe/socket-apollo-link
+    $ yarn add @r26d/absinthe_apollo-socket-apollo-link
 
 ## Examples
 
@@ -36,7 +36,7 @@
 // @flow
 
 import * as AbsintheSocket from '@absinthe/socket'
-import { createAbsintheSocketLink } from '@absinthe/socket-apollo-link'
+import { createAbsintheSocketLink } from '@r26d/absinthe_apollo-socket-apollo-link'
 import { Socket as PhoenixSocket } from 'phoenix'
 
 export default createAbsintheSocketLink(
@@ -113,4 +113,4 @@ AbsintheSocket instance
 
 ## License
 
-[MIT](LICENSE.txt) :copyright: Jumpn Limited.
+[MIT](LICENSE.txt) :copyright: Jumpn Limited  & r26D LLC

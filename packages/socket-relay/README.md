@@ -1,4 +1,4 @@
-# @absinthe/socket-relay
+# @r26d/absinthe_apollo-socket-relay
 
 > Absinthe Socket Relay
 
@@ -39,7 +39,7 @@
 ```javascript
 // @flow
 
-import { createFetcher, createSubscriber } from '@absinthe-phoenix-socket-relay'
+import { createFetcher, createSubscriber } from '@r26d/absinthe_apollo-socket-relay'
 import { Environment, Network } from 'relay-runtime'
 
 import absintheSocket from './absintheSocket'
@@ -103,4 +103,4 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ## License
 
-[MIT](LICENSE.txt) :copyright: Jumpn Limited.
+[MIT](LICENSE.txt) :copyright: Jumpn Limited. & r26D

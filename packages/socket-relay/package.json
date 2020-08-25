@@ -40,7 +40,7 @@
     "utils"
   ],
   "dependencies": {
-    "@absinthe/socket": "0.2.1",
+    "@r26d/absinthe_apollo-socket": "0.0.1",
     "@babel/runtime": "7.2.0",
     "@jumpn/utils-graphql": "0.6.0",
     "@jumpn/utils-promise": "0.3.1",

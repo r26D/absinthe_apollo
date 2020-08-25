@@ -43,17 +43,16 @@
     "utils"
   ],
   "dependencies": {
-    "@absinthe/socket": "0.2.1",
+    "@r26d/absinthe_apollo-socket": "0.0.1",
     "@babel/runtime": "7.2.0",
     "@jumpn/utils-graphql": "0.6.0",
     "core-js": "2.6.0"
   },
   "devDependencies": {
-    "flow-remove-types": "^2.132.0",
     "nps": "5.9.3"
   },
   "peerDependencies": {
-    "phoenix": "^1.4.0"
+    "phoenix": "^1.5.0"
   },
   "publishConfig": {
     "access": "public"
