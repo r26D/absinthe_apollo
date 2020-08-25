@@ -1,4 +1,4 @@
-# @r26d/absinthe_apollo-socket-graphiql
+# @r26d/absinthe-apollo-socket-graphiql
 
 > Socket GraphiQL Utilities
 
@@ -20,11 +20,11 @@
 
 ### Using [npm](https://docs.npmjs.com/cli/npm)
 
-    $ npm install --save phoenix @r26d/absinthe_apollo-socket-graphiql
+    $ npm install --save phoenix @r26d/absinthe-apollo-socket-graphiql
 
 ### Using [yarn](https://yarnpkg.com)
 
-    $ yarn add phoenix @r26d/absinthe_apollo-socket-graphiql
+    $ yarn add phoenix @r26d/absinthe-apollo-socket-graphiql
 
 ## API
 
@@ -36,9 +36,9 @@ Creates a Fetcher using the given arguments
 
 #### Parameters
 
-- `apiUrl` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
-- `subscriptionsClient` **SubscriptionClient**
-- `subscriptionSentMessage` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+-   `apiUrl`  
+-   `subscriptionsClient`  
+-   `subscriptionSentMessage`  
 
 ## License
 

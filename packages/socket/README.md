@@ -1,4 +1,4 @@
-# @r26d/absinthe_apollo-socket
+# @r26d/absinthe-apollo-socket
 
 > Absinthe Socket
 
@@ -73,11 +73,11 @@
 
 ### Using [npm](https://docs.npmjs.com/cli/npm)
 
-    $ npm install --save phoenix @r26d/absinthe_apollo-socket
+    $ npm install --save phoenix @r26d/absinthe-apollo-socket
 
 ### Using [yarn](https://yarnpkg.com)
 
-    $ yarn add phoenix @r26d/absinthe_apollo-socket
+    $ yarn add phoenix @r26d/absinthe-apollo-socket
 
 ## Types
 
