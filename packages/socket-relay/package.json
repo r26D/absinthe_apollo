@@ -1,6 +1,6 @@
 {
   "name": "@r26d/absinthe-apollo-socket-relay",
-  "version": "0.0.2-alpha.0",
+  "version": "0.0.2",
   "description": "Absinthe Socket Relay",
   "module": "dist/index.js",
   "main": "src/index.js",
@@ -43,7 +43,7 @@
     "@babel/runtime": "7.2.0",
     "@jumpn/utils-graphql": "0.6.0",
     "@jumpn/utils-promise": "0.3.1",
-    "@r26d/absinthe-apollo-socket": "^0.0.2-alpha.0",
+    "@r26d/absinthe-apollo-socket": "^0.0.2",
     "core-js": "2.6.0",
     "react-relay": "1.7.0"
   },
