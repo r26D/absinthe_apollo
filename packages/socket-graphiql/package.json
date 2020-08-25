@@ -1,5 +1,5 @@
 {
-  "name": "@r26d/absinthe_apollo-socket-graphiql",
+  "name": "@r26d/absinthe-apollo-socket-graphiql",
   "version": "0.0.1",
   "description": "Socket GraphiQL Utilities",
   "module": "dist/index.js",
@@ -43,7 +43,7 @@
     "utils"
   ],
   "dependencies": {
-    "@r26d/absinthe_apollo-socket": "0.0.1",
+    "@r26d/absinthe-apollo-socket": "0.0.1",
     "@babel/runtime": "7.2.0",
     "@jumpn/utils-graphql": "0.6.0",
     "core-js": "2.6.0"

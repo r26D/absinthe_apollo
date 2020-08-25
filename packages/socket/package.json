@@ -1,5 +1,5 @@
 {
-  "name": "@r26d/absinthe_apollo-socket",
+  "name": "@r26d/absinthe-apollo-socket",
   "version": "0.0.1",
   "description": "Absinthe Socket",
   "module": "dist/index.js",
