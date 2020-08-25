@@ -22,11 +22,15 @@ const createChannelJoinHandler = (absintheSocket) => ({
   onError: (errorMessage) =>
     notifyErrorToAllActive(absintheSocket, errorMessage),
 
-  onSucceed: () =>
+  onSucceed: () => {
     absintheSocket.notifiers.forEach((notifier) =>
       pushRequest(absintheSocket, notifier)
-    ),
+    )
 
+    if (absintheSocket.phoenixSocket.absintheRejoined) {
+      absintheSocket.phoenixSocket.absintheRejoined()
+    }
+  },
   onTimeout: () => notifyErrorToAllActive(absintheSocket, 'timeout')
 })
 
