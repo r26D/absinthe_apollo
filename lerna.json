@@ -5,7 +5,7 @@
   "npmClientArgs": [
     "--exact"
   ],
-  "useWorkspaces": true,
+  "useWorkspaces": false,
   "command": {
     "init": {
       "exact": true
