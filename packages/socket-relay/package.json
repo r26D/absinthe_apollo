@@ -1,0 +1,56 @@
+{
+  "name": "@r26d/absinthe_apollo-socket-relay",
+  "version": "0.0.1",
+  "description": "Absinthe Socket Relay",
+  "module": "dist/index.js",
+  "main": "src/index.js",
+  "react-native": "src/index",
+  "scripts": {
+    "version": "nps version",
+    "prepack": "nps prepack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r26D/absinthe_apollo.git"
+  },
+  "contributors": [
+    {
+      "name": "Mauro Titimoli",
+      "email": "mgtitimoli@gmail.com",
+      "url": "https://github.com/mgtitimoli"
+    },
+    {
+      "name": "Dirk Elmendorf",
+      "url": "http://www.r26d.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/r26D/absinthe_apollo/issues"
+  },
+  "homepage": "https://github.com/r26D/absinthe_apollo#readme",
+  "keywords": [
+    "absinthe",
+    "phoenix",
+    "socket",
+    "relay",
+    "client",
+    "graphql",
+    "utilities",
+    "utils"
+  ],
+  "dependencies": {
+    "@absinthe/socket": "0.2.1",
+    "@babel/runtime": "7.2.0",
+    "@jumpn/utils-graphql": "0.6.0",
+    "@jumpn/utils-promise": "0.3.1",
+    "core-js": "2.6.0",
+    "react-relay": "1.7.0"
+  },
+  "devDependencies": {
+    "nps": "5.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
