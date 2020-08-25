@@ -2,10 +2,10 @@
 module.exports = {
     scripts: {
         "build:readme": "pkg-to-readme --template ./readmeTemplate.ejs --force && documentation readme src/** --markdown-toc=false --section API && doctoc README.md",
-        "build:src:bundle": "rollup -c ../../rollup.config.js",
-        "build:src:clean": "rm -rfv dist compat",
-        "build:src": "nps 'build:src:clean' 'build:src:bundle'",
-        "prepack": "nps 'build:src'",
+        "prepare": "nps  'prepare:clean' 'prepare:js' 'prepare:prettier'",
+        "prepare:clean": "rm -rf lib",
+        "prepare:js": "babel src -d lib",
+        "prepare:prettier": "prettier 'lib/**/*.js'  --write",
         "version": "nps 'build:readme' && git add README.md",
     }
 };

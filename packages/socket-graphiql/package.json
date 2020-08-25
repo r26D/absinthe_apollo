@@ -2,12 +2,15 @@
   "name": "@r26d/absinthe-apollo-socket-graphiql",
   "version": "0.0.2",
   "description": "Socket GraphiQL Utilities",
-  "module": "dist/index.js",
-  "main": "compat/cjs/index.js",
+  "module": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "main": "lib",
   "react-native": "src/index",
   "scripts": {
     "version": "nps version",
-    "prepack": "nps prepack"
+    "prepare": "nps prepare"
   },
   "repository": {
     "type": "git",
@@ -43,13 +46,19 @@
     "utils"
   ],
   "dependencies": {
-    "@babel/runtime": "7.2.0",
-    "@jumpn/utils-graphql": "0.6.0",
+    "@babel/runtime": "7.11.2",
     "@r26d/absinthe-apollo-socket": "^0.0.2",
-    "core-js": "2.6.0"
+    "@jumpn/utils-graphql": "0.6.0",
+    "core-js": "3.6.5"
   },
   "devDependencies": {
-    "nps": "5.9.3"
+    "nps": "5.10.0",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.11.0",
+    "prettier": "^2.1.0"
   },
   "peerDependencies": {
     "phoenix": "^1.5.0"

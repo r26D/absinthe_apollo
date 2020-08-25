@@ -1,42 +1,20 @@
 {
   "name": "absinthe_apollo",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "lint": "eslint --rule 'flowtype-errors/show-errors: error'"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
+   },
   "devDependencies": {
     "@babel/core": "7.11.4",
     "@babel/plugin-proposal-class-properties": "7.10.4",
     "@babel/plugin-transform-runtime": "7.11.0",
     "@babel/preset-env": "7.11.0",
-    "@rollup/plugin-babel": "^5.2.0",
-    "@rollup/plugin-commonjs": "^15.0.0",
-    "@rollup/plugin-node-resolve": "^9.0.0",
-    "babel-eslint": "10.1.0",
     "doctoc": "1.4.0",
     "documentation": "13.0.2",
-    "eslint": "7.7.0",
-    "eslint-config-airbnb-base": "14.2.0",
-    "eslint-config-prettier": "6.11.0",
-    "eslint-plugin-import": "2.22.0",
-    "eslint-plugin-prettier": "3.1.4",
     "globby": "11.0.1",
     "lerna": "^3.22.1",
-    "lint-staged": "10.2.13",
-    "pascal-case": "3.1.1",
     "pkg-to-readme": "1.1.0",
-    "prettier": "2.1.0",
-    "rollup": "2.26.5"
-  },
+    "prettier": "2.1.0"
+   },
   "dependencies": {
     "phoenix": "1.5.4"
   }

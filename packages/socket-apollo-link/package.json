@@ -2,12 +2,15 @@
   "name": "@r26d/absinthe-apollo-socket-apollo-link",
   "version": "0.0.2",
   "description": "Absinthe Socket Apollo Link",
-  "module": "dist/index.js",
-  "main": "compat/cjs/index.js",
+  "module": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "main": "lib",
   "react-native": "src/index",
   "scripts": {
     "version": "nps version",
-    "prepack": "nps prepack"
+    "prepare": "nps prepare"
   },
   "repository": {
     "type": "git",
@@ -51,7 +54,13 @@
     "zen-observable": "0.8.15"
   },
   "devDependencies": {
-    "nps": "5.10.0"
+    "nps": "5.10.0",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.11.0",
+    "prettier": "^2.1.0"
   },
   "publishConfig": {
     "access": "public"
