@@ -1,17 +1,17 @@
-// @flow
+//      
 
 import {ApolloLink} from "apollo-link";
 import {send, toObservable, unobserveOrCancel} from "@absinthe/socket";
 import {compose} from "flow-static-land/lib/Fun";
 import {print} from "graphql";
 
-import type {AbsintheSocket, GqlRequest, Observer} from "@absinthe/socket";
-import type {DocumentNode} from "graphql/language/ast";
+                                                                           
+                                                       
 
-type ApolloOperation<Variables> = {|
-  query: DocumentNode,
-  variables: Variables
-|};
+                                    
+                      
+                      
+   
 
 const unobserveOrCancelIfNeeded = (absintheSocket, notifier, observer) => {
   if (notifier && observer) {
@@ -26,10 +26,10 @@ const notifierToObservable = (absintheSocket, onError, onStart) => notifier =>
     unsubscribe: unobserveOrCancelIfNeeded
   });
 
-const getRequest = <Variables: Object>({
+const getRequest =                    ({
   query,
   variables
-}: ApolloOperation<Variables>): GqlRequest<Variables> => ({
+}                            )                        => ({
   operation: print(query),
   variables
 });
@@ -38,10 +38,10 @@ const getRequest = <Variables: Object>({
  * Creates a terminating ApolloLink to request operations using given
  * AbsintheSocket instance
  */
-const createAbsintheSocketLink = <Result, Variables: void | Object>(
-  absintheSocket: AbsintheSocket,
-  onError?: $ElementType<Observer<Result, Variables>, "onError">,
-  onStart?: $ElementType<Observer<Result, Variables>, "onStart">
+const createAbsintheSocketLink =                                   (
+  absintheSocket                ,
+  onError                                                       ,
+  onStart                                                       
 ) =>
   new ApolloLink(
     compose(

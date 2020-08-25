@@ -1,8 +1,8 @@
-// @flow
+//      
 
 import {getOperationType} from "@jumpn/utils-graphql";
 
-import type {GqlRequestCompat} from "@jumpn/utils-graphql/compat/cjs/types";
+                                                                            
 
 import SubscriptionClient from "./SubscriptionsClient";
 
@@ -16,7 +16,7 @@ const parseIfJson = text => {
 
 const responseToText = response => response.text();
 
-const postJson = (url: string, body: Object): Promise<string> =>
+const postJson = (url        , body        )                  =>
   fetch(url, {
     method: "post",
     headers: {
@@ -43,7 +43,7 @@ const subscribeWithObservable = (
   subscriptionSentMessage,
   gqlRequestCompat
 ) => ({
-  subscribe: (observer: {error: Function, next: Function}) => {
+  subscribe: (observer                                   ) => {
     observer.next(subscriptionSentMessage);
 
     state.activeSubscriptionId = subscriptionsClient.subscribe(
@@ -57,13 +57,13 @@ const subscribeWithObservable = (
  * Creates a Fetcher using the given arguments
  */
 const createFetcher = (
-  apiUrl: string,
-  subscriptionsClient: SubscriptionClient,
-  subscriptionSentMessage: string
+  apiUrl        ,
+  subscriptionsClient                    ,
+  subscriptionSentMessage        
 ) => {
   const state = {activeSubscriptionId: undefined};
 
-  return (gqlRequestCompat: GqlRequestCompat<any>) => {
+  return (gqlRequestCompat                       ) => {
     if (state.activeSubscriptionId) {
       subscriptionsClient.unsubscribe(state.activeSubscriptionId);
     }

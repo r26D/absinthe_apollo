@@ -1,21 +1,21 @@
-// @flow
+//      
 
 import * as withAbsintheSocket from "@absinthe/socket";
 import {requestFromCompat} from "@jumpn/utils-graphql";
 import {Socket as PhoenixSocket} from "phoenix";
 
-import type {
-  AbsintheSocket,
-  GqlRequest,
-  SubscriptionPayload
-} from "@absinthe/socket";
-import type {GqlRequestCompat} from "@jumpn/utils-graphql/dist/types";
-import type {SocketOpts} from "phoenix";
+             
+                 
+             
+                     
+                          
+                                                                      
+                                        
 
-type SubscriptionCallback = (
-  error: ?Error,
-  payload?: SubscriptionPayload<any>
-) => void;
+                             
+                
+                                    
+          
 
 const observe = (subscriptionsClient, notifier, callback) =>
   withAbsintheSocket.observe(subscriptionsClient.absintheSocket, notifier, {
@@ -64,13 +64,13 @@ const cancel = (subscriptionsClient, notifier) => {
 };
 
 export default class SubscriptionsClient {
-  absintheSocket: AbsintheSocket;
+  absintheSocket                ;
 
   requestsCount = 0;
 
-  requests: Map<GqlRequest<any>, string>;
+  requests                              ;
 
-  constructor(socketUrl: string, options: SocketOpts) {
+  constructor(socketUrl        , options            ) {
     this.absintheSocket = withAbsintheSocket.create(
       new PhoenixSocket(socketUrl, options)
     );
@@ -83,9 +83,9 @@ export default class SubscriptionsClient {
   }
 
   subscribe(
-    requestCompat: GqlRequestCompat<any>,
-    callback: SubscriptionCallback
-  ): string {
+    requestCompat                       ,
+    callback                      
+  )         {
     const notifier = withAbsintheSocket.send(
       this.absintheSocket,
       requestFromCompat(requestCompat)
@@ -98,7 +98,7 @@ export default class SubscriptionsClient {
     return requestKey;
   }
 
-  unsubscribe(requestKey: string) {
+  unsubscribe(requestKey        ) {
     const request = findRequest(this, requestKey);
 
     if (request) {

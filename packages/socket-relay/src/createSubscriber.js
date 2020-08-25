@@ -1,12 +1,12 @@
-// @flow
+//      
 
 import notifierFind from "@absinthe/socket/dist/notifier/find";
 import {observe, send, unobserveOrCancel} from "@absinthe/socket";
 import {createDeferred} from "@jumpn/utils-promise";
 import {getOperationType} from "@jumpn/utils-graphql";
 
-import type {AbsintheSocket} from "@absinthe/socket";
-import type {SubscribeFunction} from "react-relay";
+                                                     
+                                                   
 
 import subscriptions from "./subscriptions";
 
@@ -40,9 +40,9 @@ const onAbort = (deferred, callback) => error => {
  * instance
  */
 const createSubscriber = (
-  absintheSocket: AbsintheSocket,
-  onRecoverableError?: (error: Error) => any
-): SubscribeFunction => (
+  absintheSocket                ,
+  onRecoverableError                        
+)                    => (
   {text: operation},
   variables,
   cacheConfig,
@@ -52,7 +52,7 @@ const createSubscriber = (
   // do so, then flow is not able to infer we are validating operation
   if (!operation || getOperationType(operation) !== "subscription") {
     throw new Error(
-      `Expected subscription, but instead got:\n${(operation: any)}`
+      `Expected subscription, but instead got:\n${(operation     )}`
     );
   }
 
@@ -63,7 +63,7 @@ const createSubscriber = (
   const observer = {
     onAbort: onAbort(deferred, OnUnrecoverableError),
     onError: onRecoverableError,
-    onResult: (onNext: any),
+    onResult: (onNext     ),
     onStart: onStart(deferred)
   };
 
