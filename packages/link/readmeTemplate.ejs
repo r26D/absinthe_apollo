@@ -25,11 +25,11 @@ $ yarn add <%= name %>
 ```javascript
 // @flow
 
-import * as AbsintheSocket from "@absinthe/socket";
-import {createAbsintheSocketLink} from "@absinthe/socket-apollo-link";
+import * as AbsintheSocket from "@r26d/absinthe-apollo-socket";
+import {createAbsintheApolloLink} from "@r26d/absinthe-apollo-link";
 import {Socket as PhoenixSocket} from "phoenix";
 
-export default createAbsintheSocketLink(AbsintheSocket.create(
+export default createAbsintheApolloLink(AbsintheSocket.create(
   new PhoenixSocket("ws://localhost:4000/socket")
 ));
 ```

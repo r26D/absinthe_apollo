@@ -27,7 +27,7 @@ const getRequest = ({ query, variables }) => ({
  * Creates a terminating ApolloLink to request operations using given
  * AbsintheSocket instance
  */
-const createAbsintheSocketLink = (absintheSocket, onError, onStart) =>
+const createAbsintheApolloLink = (absintheSocket, onError, onStart) =>
   new ApolloLink(
     compose(
       notifierToObservable(absintheSocket, onError, onStart),
@@ -36,4 +36,4 @@ const createAbsintheSocketLink = (absintheSocket, onError, onStart) =>
     )
   )
 
-export default createAbsintheSocketLink
+export default createAbsintheApolloLink
