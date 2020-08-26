@@ -1,7 +1,10 @@
 {
   "name": "absinthe_apollo",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "install_all": "lerna exec -- npm install"
+
+  },
   "devDependencies": {
     "@babel/core": "7.11.4",
     "@babel/plugin-proposal-class-properties": "7.10.4",
