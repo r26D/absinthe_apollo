@@ -43,7 +43,6 @@
     "utils"
   ],
   "dependencies": {
-    "@babel/runtime": "^7.11.2",
     "@jumpn/utils-array": "0.3.4",
     "@jumpn/utils-composite": "0.7.0",
     "@jumpn/utils-graphql": "0.6.0",
@@ -51,7 +50,9 @@
     "zen-observable": "0.8.15"
   },
   "devDependencies": {
-    "nps": "5.10.0"
+    "nps": "5.10.0",
+    "@babel/cli": "^7.10.5",
+    "@babel/runtime": "^7.11.2"
   },
   "peerDependencies": {
     "phoenix": "^1.5.0"
@@ -59,5 +60,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "60ac02b45878b807bb45b766b5ecc91f9f4dea60"
+  "gitHead": "9b6c04ca7c45b0d29c10047ee9ed5626dbcb3d21"
 }

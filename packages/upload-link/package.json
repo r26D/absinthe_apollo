@@ -30,10 +30,12 @@
     "graphql": "^15.3.0"
   },
   "devDependencies": {
-    "nps": "5.10.0"
+    "nps": "5.10.0",
+    "@babel/cli": "^7.10.5",
+    "@babel/runtime": "^7.11.2"
   },
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "60ac02b45878b807bb45b766b5ecc91f9f4dea60"
+  "gitHead": "9b6c04ca7c45b0d29c10047ee9ed5626dbcb3d21"
 }

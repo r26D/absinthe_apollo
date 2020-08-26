@@ -47,13 +47,14 @@
     "utils"
   ],
   "dependencies": {
-    "@babel/runtime": "7.11.2",
     "@jumpn/utils-graphql": "0.6.0",
-    "@r26d/absinthe-apollo-socket": "^0.0.11",
+    "@r26d/absinthe-apollo-socket": "^0.0.*",
     "core-js": "3.6.5"
   },
   "devDependencies": {
-    "nps": "5.10.0"
+    "nps": "5.10.0",
+    "@babel/cli": "^7.10.5",
+    "@babel/runtime": "^7.11.2"
   },
   "peerDependencies": {
     "phoenix": "^1.5.0"
@@ -61,5 +62,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "60ac02b45878b807bb45b766b5ecc91f9f4dea60"
+  "gitHead": "9b6c04ca7c45b0d29c10047ee9ed5626dbcb3d21"
 }
