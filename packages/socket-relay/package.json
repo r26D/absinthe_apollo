@@ -1,6 +1,6 @@
 {
   "name": "@r26d/absinthe-apollo-socket-relay",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Absinthe Socket Relay for React",
   "module": "lib/index.js",
   "files": [

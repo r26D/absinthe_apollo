@@ -21,7 +21,7 @@
 
 # @r26d/absinthe-apollo-upload-link
 
-> A network interface for Apollo that enables file-uploading to Absinthe back ends.
+> A network interface for Apollo that enables file-uploading to Absinthe back ends reduced to just middleware to make it easier to work with.
 > A network interface for Apollo that enables file-uploading to Absinthe backends.
 
 # This branch is for Apollo V3

@@ -1,6 +1,6 @@
 # @r26d/absinthe-apollo-socket
 
-> Absinthe Socket
+> Absinthe Socket - Allows the connection
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->

@@ -1,6 +1,6 @@
 {
   "name": "@r26d/absinthe-apollo-socket-apollo-link",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Special Apollo Link with Absinthe Support",
   "module": "lib/index.js",
   "files": [
