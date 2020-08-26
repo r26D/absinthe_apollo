@@ -1,6 +1,6 @@
 {
   "name": "@r26d/absinthe-apollo-socket-graphiql",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Socket GraphiQL Utilities",
   "module": "lib/index.js",
   "files": [
