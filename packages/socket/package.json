@@ -1,6 +1,6 @@
 {
   "name": "@r26d/absinthe-apollo-socket",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Absinthe Socket - Allows the connection",
   "module": "lib/index.js",
   "files": [
