@@ -1,1 +1,1 @@
-export { default as createAbsintheSocketLink } from './createAbsintheSocketLink'
+export { default as createAbsintheApolloLink } from './createAbsintheApolloLink'
