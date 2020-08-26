@@ -2,7 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [@r26d/absinthe-apollo-upload-link](#r26dabsinthe-apollo-upload-link)
+- [@r26d/absinthe-apollo-upload-middleware](#r26dabsinthe-apollo-upload-middleware)
 - [This branch is for Apollo V3](#this-branch-is-for-apollo-v3)
   - [Usage](#usage)
     - [Usage with React Native](#usage-with-react-native)
@@ -19,7 +19,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# @r26d/absinthe-apollo-upload-link
+# @r26d/absinthe-apollo-upload-middleware
 
 > A network interface for Apollo that enables file-uploading to Absinthe back ends reduced to just middleware to make it easier to work with.
 > A network interface for Apollo that enables file-uploading to Absinthe backends.

@@ -1,7 +1,6 @@
 {
   "name": "@r26d/absinthe-apollo-upload-middleware",
-
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A network interface for Apollo that enables file-uploading to Absinthe back ends reduced to just middleware to make it easier to work with.",
   "module": "lib/index.js",
   "files": [

@@ -2,7 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [@r26d/absinthe-apollo-upload-client](#r26dabsinthe-apollo-upload-client)
+- [@r26d/absinthe-apollo-upload-link](#r26dabsinthe-apollo-upload-link)
   - [API](#api)
     - [ReactNativeFileSubstitute](#reactnativefilesubstitute)
       - [Properties](#properties)
@@ -20,7 +20,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# @r26d/absinthe-apollo-upload-client
+# @r26d/absinthe-apollo-upload-link
 
 > A terminating Apollo Link for Apollo Client that allows FileList, File, Blob or ReactNativeFile instances within query or mutation variables and sends GraphQL multipart requests. Modified to support the Absinthe way of posting files
 >

@@ -1,4 +1,4 @@
-# @r26d/absinthe-apollo-socket-apollo-link
+# @r26d/absinthe-apollo-link
 
 > Special Apollo Link with Absinthe Support
 
@@ -22,11 +22,11 @@
 
 ### Using [npm](https://docs.npmjs.com/cli/npm)
 
-    $ npm install --save @r26d/absinthe-apollo-socket-apollo-link
+    $ npm install --save @r26d/absinthe-apollo-link
 
 ### Using [yarn](https://yarnpkg.com)
 
-    $ yarn add @r26d/absinthe-apollo-socket-apollo-link
+    $ yarn add @r26d/absinthe-apollo-link
 
 ## Examples
 
