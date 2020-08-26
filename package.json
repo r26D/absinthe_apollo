@@ -1,8 +1,7 @@
 {
   "name": "absinthe_apollo",
   "private": true,
-  "scripts": {
-   },
+  "scripts": {},
   "devDependencies": {
     "@babel/core": "7.11.4",
     "@babel/plugin-proposal-class-properties": "7.10.4",
@@ -14,7 +13,7 @@
     "lerna": "^3.22.1",
     "pkg-to-readme": "1.1.0",
     "prettier": "2.1.0"
-   },
+  },
   "dependencies": {
     "phoenix": "1.5.4"
   }
