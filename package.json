@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "install_all": "lerna exec -- npm install",
-    "update": "npx lernaupdate"
+    "update": "npx lernaupdate",
+    "publish": "lerna publish"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
