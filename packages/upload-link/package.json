@@ -4,7 +4,8 @@
   "description": "A network interface for Apollo that enables file-uploading to Absinthe back ends reduced to just middleware to make it easier to work with.",
   "module": "lib/index.js",
   "files": [
-    "lib"
+    "lib",
+    "src"
   ],
   "main": "lib",
   "react-native": "src/index",

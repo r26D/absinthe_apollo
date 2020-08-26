@@ -4,7 +4,8 @@
   "description": "Special Apollo Link with Absinthe Support",
   "module": "lib/index.js",
   "files": [
-    "lib"
+    "lib",
+    "src"
   ],
   "main": "lib/index.js",
   "react-native": "src/index",
