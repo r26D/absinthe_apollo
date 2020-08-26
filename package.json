@@ -2,22 +2,31 @@
   "name": "absinthe_apollo",
   "private": true,
   "scripts": {
-    "install_all": "lerna exec -- npm install"
-
+    "install_all": "lerna exec -- npm install",
+    "update": "npx lernaupdate"
   },
   "devDependencies": {
-    "@babel/core": "7.11.4",
-    "@babel/plugin-proposal-class-properties": "7.10.4",
-    "@babel/plugin-transform-runtime": "7.11.0",
-    "@babel/preset-env": "7.11.0",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.11.0",
     "doctoc": "1.4.0",
     "documentation": "13.0.2",
     "globby": "11.0.1",
+    "graphql": "^15.3.0",
     "lerna": "^3.22.1",
+    "lerna-update-wizard": "^0.17.8",
+    "nps": "5.10.0",
     "pkg-to-readme": "1.1.0",
-    "prettier": "2.1.0"
+    "prettier": "^2.1.0"
   },
   "dependencies": {
-    "phoenix": "1.5.4"
+    "@r26d/absinthe-apollo-socket": "file:packages/socket",
+    "@r26d/absinthe-apollo-socket-apollo-link": "file:packages/socket-apollo-link",
+    "@r26d/absinthe-apollo-socket-graphiql": "file:packages/socket-graphiql",
+    "@r26d/absinthe-apollo-socket-relay": "file:packages/socket-relay",
+    "@r26d/absinthe-apollo-upload-client": "file:packages/upload-client",
+    "@r26d/absinthe-apollo-upload-link": "file:packages/upload-link"
   }
 }

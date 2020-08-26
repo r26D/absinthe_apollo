@@ -49,17 +49,11 @@
   "dependencies": {
     "@babel/runtime": "7.11.2",
     "@jumpn/utils-graphql": "0.6.0",
-    "@r26d/absinthe-apollo-socket": "^0.0.6",
+    "@r26d/absinthe-apollo-socket": "^0.0",
     "core-js": "3.6.5"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.4",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/plugin-transform-runtime": "^7.8.3",
-    "@babel/preset-env": "^7.11.0",
-    "nps": "5.10.0",
-    "prettier": "^2.1.0"
+    "nps": "5.10.0"
   },
   "peerDependencies": {
     "phoenix": "^1.5.0"
