@@ -1,7 +1,7 @@
 //
 
 import { ApolloLink } from '@apollo/client'
-import { send, toObservable, unobserveOrCancel } from '@r26d/absinthe_apollo-socket'
+import { send, toObservable, unobserveOrCancel } from '@r26d/absinthe-apollo-socket'
 import compose from 'ramda/src/compose'
 import { print } from 'graphql'
 
