@@ -42,7 +42,7 @@
 import {createFetcher, createSubscriber} from "@absinthe-phoenix-socket-relay";
 import {Environment, Network} from "relay-runtime";
 
-import absintheSocket from "./absintheSocket";
+import * as AbsintheSocket from '@r26d/absinthe-apollo-socket'
 
 export default new Environment({
   network: Network.create(
@@ -97,4 +97,4 @@ disposable has started or to `false` otherwise
 
 ## License
 
-[MIT](LICENSE.txt) :copyright: Jumpn Limited & r26D LLC
+[MIT](LICENSE.txt) :copyright: r26D LLC

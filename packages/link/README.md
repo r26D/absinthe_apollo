@@ -33,8 +33,6 @@
 1.  Create AbsintheSocketLink (`absinthe-socket-link.js`)
 
 ```javascript
-// @flow
-
 import * as AbsintheSocket from "@r26d/absinthe-apollo-socket";
 import {createAbsintheApolloLink} from "@r26d/absinthe-apollo-link";
 import {Socket as PhoenixSocket} from "phoenix";
@@ -47,8 +45,6 @@ export default createAbsintheApolloLink(AbsintheSocket.create(
 2.  Send all the operations using AbsintheSocketLink
 
 ```javascript
-// @flow
-
 import ApolloClient from "apollo-client";
 import {InMemoryCache} from "apollo-cache-inmemory";
 
@@ -64,8 +60,6 @@ const client = new ApolloClient({
 3.  Subscribe using AbsintheSocketLink and send queries and mutations using HttpLink
 
 ```javascript
-// @flow
-
 import ApolloClient from "apollo-client";
 import {createHttpLink} from "apollo-link-http";
 import {hasSubscription} from "@jumpn/utils-graphql";
@@ -113,4 +107,4 @@ AbsintheSocket instance
 
 ## License
 
-[MIT](LICENSE.txt) :copyright: Jumpn Limited. & r26D LLC
+[MIT](LICENSE.txt) :copyright:  r26D LLC

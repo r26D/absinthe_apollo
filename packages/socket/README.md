@@ -10,7 +10,6 @@
 - [Installation](#installation)
   - [Using npm](#using-npm)
   - [Using yarn](#using-yarn)
-- [Types](#types)
 - [API](#api)
   - [cancel](#cancel)
     - [Parameters](#parameters)
@@ -78,52 +77,6 @@
 ### Using [yarn](https://yarnpkg.com)
 
     $ yarn add phoenix @r26d/absinthe-apollo-socket
-
-## Types
-
-```flowtype
-type RequestStatus = "canceled" | "canceling" | "pending" | "sent" | "sending";
-
-// from @jumpn/utils-graphql
-type GqlRequest<Variables: void | Object = void> = {
-  operation: string,
-  variables?: Variables
-};
-
-// from @jumpn/utils-graphql
-type GqlResponse<Data> = {
-  data?: Data,
-  errors?: Array<GqlError>
-};
-
-// from @jumpn/utils-graphql
-type GqlOperationType = "mutation" | "query" | "subscription";
-
-type Observer<Result, Variables: void | Object = void> = {|
-  onAbort?: (error: Error) => any,
-  onCancel?: () => any,
-  onError?: (error: Error) => any,
-  onStart?: (notifier: Notifier<Result, Variables>) => any,
-  onResult?: (result: Result) => any
-|};
-
-type Notifier<Result, Variables: void | Object = void> = {|
-  activeObservers: $ReadOnlyArray<Observer<Result, Variables>>,
-  canceledObservers: $ReadOnlyArray<Observer<Result, Variables>>,
-  isActive: boolean,
-  operationType: GqlOperationType,
-  request: GqlRequest<Variables>,
-  requestStatus: RequestStatus,
-  subscriptionId?: string
-|};
-
-type AbsintheSocket = {|
-  channel: Channel,
-  channelJoinCreated: boolean,
-  notifiers: Array<Notifier<any>>,
-  phoenixSocket: PhoenixSocket
-|};
-```
 
 ## API
 
@@ -299,4 +252,4 @@ withAbsintheSocket.unobserve(absintheSocket, notifier, observer);
 
 ## License
 
-[MIT](LICENSE.txt) :copyright: Jumpn Limited & r26D LLC
+[MIT](LICENSE.txt) :copyright:  r26D LLC

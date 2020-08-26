@@ -42,4 +42,4 @@ Creates a Fetcher using the given arguments
 
 ## License
 
-[MIT](LICENSE.txt) :copyright: Jumpn Limited & r26D LLC
+[MIT](LICENSE.txt) :copyright:  r26D LLC

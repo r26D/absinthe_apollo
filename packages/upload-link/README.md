@@ -23,8 +23,6 @@
 # @r26d/absinthe-apollo-upload-link
 
 > A terminating Apollo Link for Apollo Client that allows FileList, File, Blob or ReactNativeFile instances within query or mutation variables and sends GraphQL multipart requests. Modified to support the Absinthe way of posting files
->
-> # apollo-upload-client-absinthe
 
 **This fork modifies the request format to support Absinthe's way of handling file uploads.**
 
