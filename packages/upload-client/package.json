@@ -38,7 +38,7 @@
   "files": [
     "lib"
   ],
-  "main": "lib",
+  "main": "lib/index.js",
   "react-native": "src/index",
   "sideEffects": false,
   "engines": {
