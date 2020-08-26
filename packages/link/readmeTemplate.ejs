@@ -23,7 +23,7 @@ $ yarn add <%= name %>
 
 1. Create AbsintheSocketLink (`absinthe-socket-link.js`)
 ```javascript
-// @flow
+
 
 import * as AbsintheSocket from "@r26d/absinthe-apollo-socket";
 import {createAbsintheApolloLink} from "@r26d/absinthe-apollo-link";
@@ -36,7 +36,7 @@ export default createAbsintheApolloLink(AbsintheSocket.create(
 
 2. Send all the operations using AbsintheSocketLink
 ```javascript
-// @flow
+
 
 import ApolloClient from "apollo-client";
 import {InMemoryCache} from "apollo-cache-inmemory";
@@ -52,7 +52,7 @@ const client = new ApolloClient({
 
 3. Subscribe using AbsintheSocketLink and send queries and mutations using HttpLink
 ```javascript
-// @flow
+
 
 import ApolloClient from "apollo-client";
 import {createHttpLink} from "apollo-link-http";
@@ -88,4 +88,4 @@ const client = new ApolloClient({
 
 ## License
 
-[<%= license %>](LICENSE.txt) :copyright: Jumpn Limited. & r26D LLC
+[<%= license %>](LICENSE.txt) :copyright:  r26D LLC

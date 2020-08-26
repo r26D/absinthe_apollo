@@ -27,7 +27,7 @@ $ yarn add <%= name %>
 import {createFetcher, createSubscriber} from "@absinthe-phoenix-socket-relay";
 import {Environment, Network} from "relay-runtime";
 
-import absintheSocket from "./absintheSocket";
+import * as AbsintheSocket from '@r26d/absinthe-apollo-socket'
 
 export default new Environment({
   network: Network.create(
@@ -51,4 +51,4 @@ export default new Environment({
 
 ## License
 
-[<%= license %>](LICENSE.txt) :copyright: Jumpn Limited & r26D LLC
+[<%= license %>](LICENSE.txt) :copyright: r26D LLC
