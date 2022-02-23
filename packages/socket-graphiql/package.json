@@ -57,7 +57,7 @@
     "nps": "5.10.0"
   },
   "peerDependencies": {
-    "phoenix": "^1.5.0"
+    "phoenix": "*"
   },
   "publishConfig": {
     "access": "public"

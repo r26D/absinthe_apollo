@@ -1,5 +1,16 @@
 # apollo-upload-client-absinthe changelog
 
+
+## 0.1.1
+  The pluging didn't handle the case where the client fails to fetch because the server is offline
+
+## 0.1.0
+
+  Initial Release
+
+
+## #From Before the Fork
+
 ## 12.1.1
 
 ### Major
