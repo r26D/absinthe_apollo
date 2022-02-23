@@ -1,5 +1,3 @@
-//
-
 export { default as cancel } from './cancel'
 export { default as create } from './create'
 export { default as observe } from './observe'

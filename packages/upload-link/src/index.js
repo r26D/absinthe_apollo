@@ -8,6 +8,7 @@ const {
   createSignalIfSupported,
   parseAndCheckHttpResponse,
 } = require('@apollo/client')
+
 const { extractFiles, ReactNativeFile } = require('extract-files')
 const lodashSet = require('lodash/set')
 const shortid = require('shortid')

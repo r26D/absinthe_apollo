@@ -1,7 +1,7 @@
 import { ApolloLink } from '@apollo/client'
 import { print } from 'graphql/language/printer'
-import extractFiles from './extractFiles'
 import { isObject } from './validators'
+import extractFiles from './extractFiles'
 
 export const createUploadMiddleware = new ApolloLink((operation, forward) => {
   operation.setContext({ fetchOptions: { formData: null } })
