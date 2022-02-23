@@ -1,6 +1,6 @@
 {
   "name": "@r26d/absinthe-apollo-upload-link",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A terminating Apollo Link for Apollo Client that allows FileList, File, Blob or ReactNativeFile instances within query or mutation variables and sends GraphQL multipart requests. Modified to support the Absinthe way of posting files",
   "license": "MIT",
   "contributors": [
@@ -53,7 +53,6 @@
     "lodash": "^4.17.15",
     "shortid": "^2.2.15"
   },
-
   "peerDependencies": {
     "phoenix": "*"
   },
