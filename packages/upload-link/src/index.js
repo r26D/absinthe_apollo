@@ -200,9 +200,14 @@ exports.createUploadLink = ({
           observer.complete()
         })
         .catch((error) => {
-          if (error.name === 'AbortError')
+          if (error.name === 'AbortError') {
             // Fetch was aborted.
             return
+          }
+          if (error.name === 'TypeError' && error.message.match("Failed to fetch")) {
+            // The endpoint is not responding
+            return
+          }
 
           if (error.result && error.result.errors && error.result.data)
             // There is a GraphQL result to forward.
