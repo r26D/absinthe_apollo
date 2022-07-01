@@ -1,5 +1,7 @@
 {
-  "packages": ["packages/*"],
+  "packages": [
+    "packages/*"
+  ],
   "version": "independent",
   "npmClient": "npm",
   "npmClientArgs": [
@@ -10,5 +12,6 @@
     "init": {
       "exact": true
     }
-  }
+  },
+  "useNx": false
 }

@@ -16,7 +16,7 @@
     "documentation": "13.2.5",
     "globby": "13.1.2",
     "graphql": "^15.8.0",
-    "lerna": "^5.1.6",
+    "lerna": "5.1.6",
     "lerna-update-wizard": "^1.1.2",
     "nps": "5.10.0",
     "pkg-to-readme": "1.1.2",
