@@ -32,10 +32,8 @@
 
 ### ReactNativeFileSubstitute
 
--   **See: [`extract-files` docs](https://github.com/jaydenseric/extract-files#type-reactnativefilesubstitute).
-    **
--   **See: [React Native `FormData` polyfill source](https://github.com/facebook/react-native/blob/v0.45.1/Libraries/Network/FormData.js#L34).
-    **
+*   **See**: [`extract-files` docs](https://github.com/jaydenseric/extract-files#type-reactnativefilesubstitute).
+*   **See**: [React Native `FormData` polyfill source](https://github.com/facebook/react-native/blob/v0.45.1/Libraries/Network/FormData.js#L34).
 
 A React Native [`File`](https://developer.mozilla.org/docs/web/api/file)
 substitute.
@@ -47,14 +45,13 @@ Type: [object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 
 #### Properties
 
--   `uri` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Filesystem path.
--   `name` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** File name.
--   `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** File content type. Some environments (particularly Android) require a valid MIME type; Expo `ImageResult.type` is unreliable as it can be just `image`.
+*   `uri` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Filesystem path.
+*   `name` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** File name.
+*   `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** File content type. Some environments (particularly Android) require a valid MIME type; Expo `ImageResult.type` is unreliable as it can be just `image`.
 
 #### Examples
 
 A camera roll file.
-
 
 ````javascript
 ```js
@@ -69,19 +66,18 @@ A camera roll file.
 ### ReactNativeFile
 
 Used to mark a
-[React Native `File` substitute][ReactNativeFileSubstitute](#reactnativefilesubstitute).
+\[React Native `File` substitute][ReactNativeFileSubstitute](#reactnativefilesubstitute).
 It’s too risky to assume all objects with `uri`, `type` and `name` properties
 are files to extract. Re-exported from [`extract-files`](https://npm.im/extract-files)
 for convenience.
 
 #### Parameters
 
--   `file` **[ReactNativeFileSubstitute](#reactnativefilesubstitute)** A React Native [`File`](https://developer.mozilla.org/docs/web/api/file) substitute.
+*   `file` **[ReactNativeFileSubstitute](#reactnativefilesubstitute)** A React Native [`File`](https://developer.mozilla.org/docs/web/api/file) substitute.
 
 #### Examples
 
 A React Native file that can be used in query or mutation variables.
-
 
 ````javascript
 ```js
@@ -97,8 +93,7 @@ const file = new ReactNativeFile({
 
 ### FetchOptions
 
--   **See: [Polyfillable fetch options](https://github.github.io/fetch#options).
-    **
+*   **See**: [Polyfillable fetch options](https://github.github.io/fetch#options).
 
 GraphQL request `fetch` options.
 
@@ -106,33 +101,31 @@ Type: [object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 
 #### Properties
 
--   `headers` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** HTTP request headers.
--   `credentials` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Authentication credentials mode.
+*   `headers` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** HTTP request headers.
+*   `credentials` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Authentication credentials mode.
 
 ### createUploadLink
 
--   **See: [GraphQL multipart request spec](https://github.com/jaydenseric/graphql-multipart-request-spec).
-    **
--   **See: [apollo-link on GitHub](https://github.com/apollographql/apollo-link).
-    **
+*   **See**: [GraphQL multipart request spec](https://github.com/jaydenseric/graphql-multipart-request-spec).
+*   **See**: [apollo-link on GitHub](https://github.com/apollographql/apollo-link).
 
 Creates a terminating [Apollo Link](https://apollographql.com/docs/link)
 capable of file uploads. Options match [`createHttpLink`](https://apollographql.com/docs/link/links/http#options).
 
 #### Parameters
 
--   `options` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Options.
-    -   `options.uri` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** GraphQL endpoint URI. (optional, default `/graphql`)
-    -   `options.fetch` **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)?** [`fetch`](https://fetch.spec.whatwg.org) implementation to use, defaulting to the `fetch` global.
-    -   `options.fetchOptions` **[FetchOptions](#fetchoptions)?** `fetch` options; overridden by upload requirements.
-    -   `options.credentials` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Overrides `options.fetchOptions.credentials`.
-    -   `options.headers` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Merges with and overrides `options.fetchOptions.headers`.
-    -   `options.includeExtensions` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** Toggles sending `extensions` fields to the GraphQL server. (optional, default `false`)
+*   `options` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Options.
+
+    *   `options.uri` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** GraphQL endpoint URI. (optional, default `/graphql`)
+    *   `options.fetch` **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)?** [`fetch`](https://fetch.spec.whatwg.org) implementation to use, defaulting to the `fetch` global.
+    *   `options.fetchOptions` **[FetchOptions](#fetchoptions)?** `fetch` options; overridden by upload requirements.
+    *   `options.credentials` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Overrides `options.fetchOptions.credentials`.
+    *   `options.headers` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Merges with and overrides `options.fetchOptions.headers`.
+    *   `options.includeExtensions` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** Toggles sending `extensions` fields to the GraphQL server. (optional, default `false`)
 
 #### Examples
 
 A basic Apollo Client setup.
-
 
 ````javascript
 ```js

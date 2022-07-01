@@ -3,6 +3,8 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [@r26d/absinthe-apollo-upload-middleware](#r26dabsinthe-apollo-upload-middleware)
+  - [Usage](#usage)
+- [This branch is for Apollo V3](#this-branch-is-for-apollo-v3)
     - [Usage with React Native](#usage-with-react-native)
   - [License](#license)
   - [Acknowledgements](#acknowledgements)
@@ -20,13 +22,13 @@
 # @r26d/absinthe-apollo-upload-middleware
 
 > A network interface for Apollo that enables file-uploading to Absinthe back ends reduced to just middleware to make it easier to work with.
->
-> ## Usage
->
-> # This branch is for Apollo V3
->
-> I simplified this to just be the middleware. That allows you to use other
-> middleware to handle the other issues related to the request.
+
+## Usage
+
+# This branch is for Apollo V3
+
+I simplified this to just be the middleware. That allows you to use other
+middleware to handle the other issues related to the request.
 
 ```js
 import ApolloClient from 'apollo-client'
@@ -78,8 +80,8 @@ name: 'photo-2.jpg'
 
 ## Acknowledgements
 
--   @labtwentyfive's [`apollo-absinthe-upload-client`](https://github.com/labtwentyfive/apollo-absinthe-upload-client)
--   @jaydenseric [`apollo-upload-client`](https://github.com/jaydenseric/apollo-upload-client)
+*   @labtwentyfive's [`apollo-absinthe-upload-client`](https://github.com/labtwentyfive/apollo-absinthe-upload-client)
+*   @jaydenseric [`apollo-upload-client`](https://github.com/jaydenseric/apollo-upload-client)
 
 ## API
 
@@ -87,8 +89,7 @@ name: 'photo-2.jpg'
 
 ### ReactNativeFileObject
 
--   **See: <https://github.com/facebook/react-native/blob/v0.45.1/Libraries/Network/FormData.js#L34>
-    **
+*   **See**: <https://github.com/facebook/react-native/blob/v0.45.1/Libraries/Network/FormData.js#L34>
 
 A React Native FormData file object.
 
@@ -96,9 +97,9 @@ Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 
 #### Properties
 
--   `uri` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** File system path.
--   `type` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** File content type.
--   `name` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** File name.
+*   `uri` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** File system path.
+*   `type` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** File content type.
+*   `name` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** File name.
 
 ### ReactNativeFile
 
@@ -106,18 +107,19 @@ A React Native file.
 
 #### Parameters
 
--   `file` **[ReactNativeFileObject](#reactnativefileobject)** 
-    -   `file.uri`  
-    -   `file.type`  
-    -   `file.name`  
+*   `file` **[ReactNativeFileObject](#reactnativefileobject)** 
 
-### 
+    *   `file.uri`  
+    *   `file.type`  
+    *   `file.name`  
+
+###
 
 Creates an array of file instances.
 
 #### Parameters
 
--   `files` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[ReactNativeFileObject](#reactnativefileobject)>** 
+*   `files` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<[ReactNativeFileObject](#reactnativefileobject)>** 
 
 #### Examples
 

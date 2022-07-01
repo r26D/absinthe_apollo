@@ -34,7 +34,7 @@
 
 ## Examples
 
--   **relay-environment.js**
+*   **relay-environment.js**
 
 ```javascript
 // @flow
@@ -64,8 +64,8 @@ instance
 
 #### Parameters
 
--   `absintheSocket`  
--   `onError`  
+*   `absintheSocket`  
+*   `onError`  
 
 ### createSubscriber
 
@@ -74,8 +74,8 @@ instance
 
 #### Parameters
 
--   `absintheSocket`  
--   `onRecoverableError`  
+*   `absintheSocket`  
+*   `onRecoverableError`  
 
 ### isSubscribed
 
@@ -84,16 +84,16 @@ disposable has started or to `false` otherwise
 
 #### Parameters
 
--   `disposable`  
+*   `disposable`  
 
 ## References
 
--   [Absinthe Socket](https://github.com/absinthe-graphql/absinthe-socket/tree/master/packages/socket)
--   **Relay**
-    -   [Environment](https://facebook.github.io/relay/docs/relay-environment.html)
-    -   [NetworkLayer](https://facebook.github.io/relay/docs/network-layer.html)
-    -   [FetchFunction](https://github.com/facebook/relay/blob/master/packages/relay-runtime/network/RelayNetworkTypes.js#L79)
-    -   [SubscribeFunction](https://github.com/facebook/relay/blob/master/packages/relay-runtime/network/RelayNetworkTypes.js#L93)
+*   [Absinthe Socket](https://github.com/absinthe-graphql/absinthe-socket/tree/master/packages/socket)
+*   **Relay**
+    *   [Environment](https://facebook.github.io/relay/docs/relay-environment.html)
+    *   [NetworkLayer](https://facebook.github.io/relay/docs/network-layer.html)
+    *   [FetchFunction](https://github.com/facebook/relay/blob/master/packages/relay-runtime/network/RelayNetworkTypes.js#L79)
+    *   [SubscribeFunction](https://github.com/facebook/relay/blob/master/packages/relay-runtime/network/RelayNetworkTypes.js#L93)
 
 ## License
 

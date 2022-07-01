@@ -33,6 +33,8 @@
 1.  Create AbsintheSocketLink (`absinthe-socket-link.js`)
 
 ```javascript
+
+
 import * as AbsintheSocket from "@r26d/absinthe-apollo-socket";
 import {createAbsintheApolloLink} from "@r26d/absinthe-apollo-link";
 import {Socket as PhoenixSocket} from "phoenix";
@@ -45,6 +47,8 @@ export default createAbsintheApolloLink(AbsintheSocket.create(
 2.  Send all the operations using AbsintheSocketLink
 
 ```javascript
+
+
 import ApolloClient from "apollo-client";
 import {InMemoryCache} from "apollo-cache-inmemory";
 
@@ -60,6 +64,8 @@ const client = new ApolloClient({
 3.  Subscribe using AbsintheSocketLink and send queries and mutations using HttpLink
 
 ```javascript
+
+
 import ApolloClient from "apollo-client";
 import {createHttpLink} from "apollo-link-http";
 import {hasSubscription} from "@jumpn/utils-graphql";
@@ -92,18 +98,18 @@ AbsintheSocket instance
 
 #### Parameters
 
--   `absintheSocket`  
--   `onError`  
--   `onStart`  
+*   `absintheSocket`  
+*   `onError`  
+*   `onStart`  
 
 ## References
 
--   [Absinthe Phoenix Socket](https://github.com/absinthe-graphql/absinthe-socket/tree/master/packages/socket)
--   **Apollo Link**
-    -   [Apollo Client](http://apollo-link-docs.netlify.com/docs/link/#apollo-client)
-    -   [Terminating Links](http://apollo-link-docs.netlify.com/docs/link/overview.html#terminating)
-    -   [Directional Composition](http://apollo-link-docs.netlify.com/docs/link/composition.html#directional)
-    -   [Http Link](http://apollo-link-docs.netlify.com/docs/link/links/http.html)
+*   [Absinthe Phoenix Socket](https://github.com/absinthe-graphql/absinthe-socket/tree/master/packages/socket)
+*   **Apollo Link**
+    *   [Apollo Client](http://apollo-link-docs.netlify.com/docs/link/#apollo-client)
+    *   [Terminating Links](http://apollo-link-docs.netlify.com/docs/link/overview.html#terminating)
+    *   [Directional Composition](http://apollo-link-docs.netlify.com/docs/link/composition.html#directional)
+    *   [Http Link](http://apollo-link-docs.netlify.com/docs/link/links/http.html)
 
 ## License
 
