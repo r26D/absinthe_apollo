@@ -28,7 +28,24 @@ const setNotifierRequestStatusSending = (absintheSocket, notifier) =>
     requestStatus: requestStatuses.sending
   })
 
-const createRequestError = (message) => new Error(`request: ${message}`)
+/*
+Modified to support standard absinthe errors:
+ https://hexdocs.pm/absinthe/errors.html
+{:error, ["Simple message",  %{message: "A map error"}]}
+
+ */
+
+const createRequestError = (message) => {
+  if (message?.errors) {
+    return(message.errors);
+  }
+  else {
+    return({errors: [{message: message}]});
+  }
+
+}
+
+
 
 const onTimeout = (absintheSocket, notifier) =>
   notifierNotifyActive(
