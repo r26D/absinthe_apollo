@@ -46,16 +46,16 @@
     "utils"
   ],
   "dependencies": {
-    "@apollo/client": "^3.1.3",
+    "@apollo/client": "^3.6.9",
     "@r26d/absinthe-apollo-socket": "^0.1.2",
-    "core-js": "3.6.5",
-    "graphql": "15.3.0",
-    "ramda": "^0.27.1",
+    "core-js": "3.23.3",
+    "graphql": "15.8.0",
+    "ramda": "^0.28.0",
     "zen-observable": "0.8.15"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/runtime": "^7.11.2",
+    "@babel/cli": "^7.18.6",
+    "@babel/runtime": "^7.18.6",
     "nps": "5.10.0"
   },
   "publishConfig": {
