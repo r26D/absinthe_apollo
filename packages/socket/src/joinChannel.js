@@ -18,12 +18,12 @@ const notifyErrorToAllActive = (absintheSocket, errorMessage) =>
 
 // join Push is reused and so the handler
 // https://github.com/phoenixframework/phoenix/blob/master/assets/js/phoenix.js#L356
-const createChannelJoinHandler = (absintheSocket) => ({
+const createChannelJoinHandler = (absintheSocket, notifiers) => ({
   onError: (errorMessage) =>
     notifyErrorToAllActive(absintheSocket, errorMessage),
 
   onSucceed: () => {
-    absintheSocket.notifiers.forEach((notifier) =>
+    notifiers.forEach((notifier) =>
       pushRequest(absintheSocket, notifier)
     )
 
@@ -35,9 +35,10 @@ const createChannelJoinHandler = (absintheSocket) => ({
 })
 
 const joinChannel = (absintheSocket) => {
+  const notifiers = absintheSocket.notifiers
   handlePush(
     absintheSocket.channel.join(),
-    createChannelJoinHandler(absintheSocket)
+    createChannelJoinHandler(absintheSocket, notifiers)
   )
 
   absintheSocket.channelJoinCreated = true
