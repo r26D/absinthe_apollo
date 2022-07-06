@@ -9,7 +9,9 @@ const {
   parseAndCheckHttpResponse,
 } = require('@apollo/client')
 
-const { extractFiles, ReactNativeFile } = require('extract-files')
+const extractFiles = require("extract-files/public/extractFiles.js");
+const ReactNativeFile  = require("extract-files/public/ReactNativeFile.js");
+
 const lodashSet = require('lodash/set')
 const shortid = require('shortid')
 
