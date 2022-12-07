@@ -9,7 +9,7 @@ import {
   parseAndCheckHttpResponse,
 }  from '@apollo/client'
 
-import extractFiles from "extract-files/extractFiles"
+import {extractFiles} from "extract-files"
 
 //https://github.com/jaydenseric/extract-files/blob/v11.0.0/public/ReactNativeFile.js
 //Was removed in more recent
