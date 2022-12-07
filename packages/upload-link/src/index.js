@@ -1,4 +1,4 @@
-const {
+import {
   ApolloLink,
   Observable,
   selectURI,
@@ -7,13 +7,22 @@ const {
   serializeFetchParameter,
   createSignalIfSupported,
   parseAndCheckHttpResponse,
-} = require('@apollo/client')
+}  from '@apollo/client'
 
-const extractFiles = require("extract-files/public/extractFiles.js");
-const ReactNativeFile  = require("extract-files/public/ReactNativeFile.js");
+import extractFiles from "extract-files/extractFiles"
 
-const lodashSet = require('lodash/set')
-const shortid = require('shortid')
+//https://github.com/jaydenseric/extract-files/blob/v11.0.0/public/ReactNativeFile.js
+//Was removed in more recent
+ class ReactNativeFile {
+  constructor({ uri, name, type }) {
+    this.uri = uri;
+    this.name = name;
+    this.type = type;
+  }
+};
+
+import lodashSet from 'lodash/set'
+import  shortid  from 'shortid'
 
 /**
  * A React Native [`File`](https://developer.mozilla.org/docs/web/api/file)
