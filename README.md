@@ -10,3 +10,10 @@ We are trying to centralize all our work in one place to make it easier to manag
 ## Started with Some Forks
 
 We forked other projects to build up this repository. We have tried to provide links back to the original repos and provide copies of the licenses (They will be postfixed with the name of the original owner).
+
+
+# Publishing
+
+npm login
+npx lerna version
+npx lerna publsh from-package
