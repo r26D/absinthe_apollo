@@ -46,12 +46,12 @@
     "@jumpn/utils-array": "0.3.4",
     "@jumpn/utils-composite": "0.7.0",
     "@jumpn/utils-graphql": "0.6.0",
-    "core-js": "^3.23.3",
-    "zen-observable": "0.8.15"
+    "core-js": "^3.26.1",
+    "zen-observable": "0.10.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.18.6",
-    "@babel/runtime": "^7.18.6",
+    "@babel/cli": "^7.19.3",
+    "@babel/runtime": "^7.20.6",
     "nps": "5.10.0"
   },
   "peerDependencies": {
