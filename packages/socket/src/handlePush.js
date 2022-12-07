@@ -1,6 +1,3 @@
-//
-
-import { Push } from 'phoenix'
 
 const handlePush = (push, handler) =>
   push

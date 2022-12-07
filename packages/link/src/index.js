@@ -1,1 +1,2 @@
-export { default as createAbsintheApolloLink } from './createAbsintheApolloLink'
+import  createAbsintheApolloLink  from './createAbsintheApolloLink'
+export {  createAbsintheApolloLink }

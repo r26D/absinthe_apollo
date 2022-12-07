@@ -10,4 +10,5 @@ module.exports = {
     ],
   ],
   plugins: ['@babel/transform-runtime'],
+  exclude: ["proposal-dynamic-import"]
 }

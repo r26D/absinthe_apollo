@@ -7,67 +7,31 @@ import {
   serializeFetchParameter,
   createSignalIfSupported,
   parseAndCheckHttpResponse,
-}  from '@apollo/client'
+} from '@apollo/client'
 
-import {extractFiles} from "extract-files"
 
+import lodashSet from 'lodash/set'
+
+import { customAlphabet } from 'nanoid'
+const nanoid = customAlphabet('1234567890abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWYZ', 10)
+
+
+
+async function mjsLoader() {
+const { extractFiles } = await import('extract-files/extractFiles.mjs')
+  return extractFiles
+}
+const extractFiles = mjsLoader()
 //https://github.com/jaydenseric/extract-files/blob/v11.0.0/public/ReactNativeFile.js
 //Was removed in more recent
- class ReactNativeFile {
-  constructor({ uri, name, type }) {
+class ReactNativeFile {
+  constructor({uri, name, type}) {
     this.uri = uri;
     this.name = name;
     this.type = type;
   }
 };
 
-import lodashSet from 'lodash/set'
-import  shortid  from 'shortid'
-
-/**
- * A React Native [`File`](https://developer.mozilla.org/docs/web/api/file)
- * substitute.
- *
- * Be aware that inspecting network requests with Chrome dev tools interferes
- * with the React Native `FormData` implementation, causing network errors.
- * @kind typedef
- * @name ReactNativeFileSubstitute
- * @type {object}
- * @see [`extract-files` docs](https://github.com/jaydenseric/extract-files#type-reactnativefilesubstitute).
- * @see [React Native `FormData` polyfill source](https://github.com/facebook/react-native/blob/v0.45.1/Libraries/Network/FormData.js#L34).
- * @prop {string} uri Filesystem path.
- * @prop {string} [name] File name.
- * @prop {string} [type] File content type. Some environments (particularly Android) require a valid MIME type; Expo `ImageResult.type` is unreliable as it can be just `image`.
- * @example <caption>A camera roll file.</caption>
- * ```js
- * {
- *   uri: uriFromCameraRoll,
- *   name: 'a.jpg',
- *   type: 'image/jpeg'
- * }
- * ```
- */
-
-/**
- * Used to mark a
- * [React Native `File` substitute]{@link ReactNativeFileSubstitute}.
- * It’s too risky to assume all objects with `uri`, `type` and `name` properties
- * are files to extract. Re-exported from [`extract-files`](https://npm.im/extract-files)
- * for convenience.
- * @kind class
- * @name ReactNativeFile
- * @param {ReactNativeFileSubstitute} file A React Native [`File`](https://developer.mozilla.org/docs/web/api/file) substitute.
- * @example <caption>A React Native file that can be used in query or mutation variables.</caption>
- * ```js
- * const { ReactNativeFile } = require('apollo-upload-client')
- *
- * const file = new ReactNativeFile({
- *   uri: uriFromCameraRoll,
- *   name: 'a.jpg',
- *   type: 'image/jpeg'
- * })
- * ```
- */
 exports.ReactNativeFile = ReactNativeFile
 
 /**
@@ -108,15 +72,15 @@ exports.ReactNativeFile = ReactNativeFile
  * ```
  */
 exports.createUploadLink = ({
-  uri: fetchUri = '/graphql',
-  fetch: linkFetch = fetch,
-  fetchOptions,
-  credentials,
-  headers,
-  includeExtensions,
-} = {}) => {
+                              uri: fetchUri = '/graphql',
+                              fetch: linkFetch = fetch,
+                              fetchOptions,
+                              credentials,
+                              headers,
+                              includeExtensions,
+                            } = {}) => {
   const linkConfig = {
-    http: { includeExtensions },
+    http: {includeExtensions},
     options: fetchOptions,
     credentials,
     headers,
@@ -131,7 +95,7 @@ exports.createUploadLink = ({
 
     const {
       // From Apollo Client config.
-      clientAwareness: { name, version } = {},
+      clientAwareness: {name, version} = {},
       headers,
     } = context
 
@@ -141,20 +105,20 @@ exports.createUploadLink = ({
       credentials: context.credentials,
       headers: {
         // Client awareness headers are context overridable.
-        ...(name && { 'apollographql-client-name': name }),
-        ...(version && { 'apollographql-client-version': version }),
+        ...(name && {'apollographql-client-name': name}),
+        ...(version && {'apollographql-client-version': version}),
         ...headers,
       },
     }
 
-    const { options, body } = selectHttpOptionsAndBody(
+    const {options, body} = selectHttpOptionsAndBody(
       operation,
       fallbackHttpConfig,
       linkConfig,
       contextConfig
     )
 
-    const { clone, files } = extractFiles(body)
+    const {clone, files} = extractFiles(body)
 
     const payload = serializeFetchParameter(clone, 'Payload')
     if (files.size) {
@@ -166,7 +130,7 @@ exports.createUploadLink = ({
 
       const form = new FormData()
 
-      const { query, operationName, variables } = body
+      const {query, operationName, variables} = body
       form.append('query', query)
       form.append('operationName', operationName)
 
@@ -175,7 +139,7 @@ exports.createUploadLink = ({
       //to use the same short code
 
       files.forEach((uses, file) => {
-        const fileShortId = shortid.generate()
+        const fileShortId = nanoid()
         form.append(fileShortId, file)
         uses.forEach((ref) => {
           const usage = ref.split('.')
@@ -193,7 +157,7 @@ exports.createUploadLink = ({
       // default abort controller.
       let abortController
       if (!options.signal) {
-        const { controller } = createSignalIfSupported()
+        const {controller} = createSignalIfSupported()
         if (controller) {
           abortController = controller
           options.signal = abortController.signal
@@ -203,7 +167,7 @@ exports.createUploadLink = ({
       linkFetch(uri, options)
         .then((response) => {
           // Forward the response on the context.
-          operation.setContext({ response })
+          operation.setContext({response})
           return response
         })
         .then(parseAndCheckHttpResponse(operation))
