@@ -1,6 +1,6 @@
 {
   "name": "@r26d/absinthe-apollo-upload-middleware",
-  "version": "0.3.0",
+  "version": "0.3.6",
   "description": "A network interface for Apollo that enables file-uploading to Absinthe back ends reduced to just middleware to make it easier to work with.",
   "module": "lib/index.js",
   "files": [
@@ -27,16 +27,15 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.2",
-
     "core-js": "^3.26.1",
     "graphql": "^15.8.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
-    "@babel/runtime": "^7.20.6",
-    "nps": "5.10.0",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/preset-env": "^7.20.2",
+    "@babel/runtime": "^7.20.6",
+    "nps": "5.10.0",
     "prettier": "^2.8.0"
   },
   "publishConfig": {
