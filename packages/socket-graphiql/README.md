@@ -36,9 +36,9 @@ Creates a Fetcher using the given arguments
 
 #### Parameters
 
-*   `apiUrl`  
-*   `subscriptionsClient`  
-*   `subscriptionSentMessage`  
+*   `apiUrl` &#x20;
+*   `subscriptionsClient` &#x20;
+*   `subscriptionSentMessage` &#x20;
 
 ## License
 

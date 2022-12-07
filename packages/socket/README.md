@@ -104,8 +104,8 @@ unsubscribing in case it holds a subscription request
 
 #### Parameters
 
-*   `absintheSocket`  
-*   `notifier`  
+*   `absintheSocket` &#x20;
+*   `notifier` &#x20;
 
 #### Examples
 
@@ -121,7 +121,7 @@ Creates an Absinthe Socket using the given Phoenix Socket instance
 
 #### Parameters
 
-*   `phoenixSocket`  
+*   `phoenixSocket` &#x20;
 
 #### Examples
 
@@ -140,9 +140,9 @@ Observes given notifier using the provided observer
 
 #### Parameters
 
-*   `absintheSocket`  
-*   `notifier`  
-*   `observer`  
+*   `absintheSocket` &#x20;
+*   `notifier` &#x20;
+*   `observer` &#x20;
 
 #### Examples
 
@@ -166,8 +166,8 @@ Sends given request and returns an object (notifier) to track its progress
 
 #### Parameters
 
-*   `absintheSocket`  
-*   `request`  
+*   `absintheSocket` &#x20;
+*   `request` &#x20;
 
 #### Examples
 
@@ -198,14 +198,14 @@ Creates an Observable that will follow the given notifier
 
 #### Parameters
 
-*   `absintheSocket` **AbsintheSocket** 
-*   `notifier` **Notifier\<Result, Variables>** 
+*   `absintheSocket` **AbsintheSocket**&#x20;
+*   `notifier` **Notifier\<Result, Variables>**&#x20;
 *   `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?**  (optional, default `{}`)
 
-    *   `options.unsubscribe` **function (): [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)?** 
-    *   `options.onError` **function (error: [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)): [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)?** 
-    *   `options.onStart` **function (notifier: Notifier\<Result, Variables>): [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)?** 
-    *   `options.handlers` **...any** 
+    *   `options.unsubscribe` **function (): [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)?**&#x20;
+    *   `options.onError` **function (error: [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)): [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)?**&#x20;
+    *   `options.onStart` **function (notifier: Notifier\<Result, Variables>): [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)?**&#x20;
+    *   `options.handlers` **...any**&#x20;
 
 #### Examples
 
@@ -227,7 +227,7 @@ const observable = withAbsintheSocket.toObservable(absintheSocket, notifier, {
 });
 ```
 
-Returns **Observable** 
+Returns **Observable**&#x20;
 
 ### unobserve
 
@@ -235,9 +235,9 @@ Detaches observer from notifier
 
 #### Parameters
 
-*   `absintheSocket`  
-*   `notifier`  
-*   `observer`  
+*   `absintheSocket` &#x20;
+*   `notifier` &#x20;
+*   `observer` &#x20;
 
 #### Examples
 
@@ -254,9 +254,9 @@ detaches given observer from notifier otherwise
 
 #### Parameters
 
-*   `absintheSocket`  
-*   `notifier`  
-*   `observer`  
+*   `absintheSocket` &#x20;
+*   `notifier` &#x20;
+*   `observer` &#x20;
 
 #### Examples
 
