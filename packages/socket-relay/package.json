@@ -1,6 +1,6 @@
 {
   "name": "@r26d/absinthe-apollo-socket-relay",
-  "version": "0.3.0",
+  "version": "0.3.5",
   "description": "Absinthe Socket Relay for React",
   "module": "lib/index.js",
   "files": [
@@ -46,14 +46,19 @@
   "dependencies": {
     "@jumpn/utils-graphql": "0.6.0",
     "@jumpn/utils-promise": "0.3.1",
-    "@r26d/absinthe-apollo-socket": "^0.3.0",
+    "@r26d/absinthe-apollo-socket": "^0.3.5",
     "core-js": "^3.26.1",
     "react-relay": "14.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
     "@babel/runtime": "^7.20.6",
-    "nps": "5.10.0"
+    "nps": "5.10.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "prettier": "^2.8.0"
   },
   "publishConfig": {
     "access": "public"
