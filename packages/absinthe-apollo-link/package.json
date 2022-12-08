@@ -1,6 +1,6 @@
 {
   "name": "@r26d/absinthe-apollo-link",
-  "version": "0.3.6",
+  "version": "1.0.0",
   "description": "Special Apollo Link with Absinthe Support",
   "files": [
     "lib",
@@ -45,7 +45,7 @@
   ],
   "dependencies": {
     "@apollo/client": "^3.7.2",
-    "@r26d/absinthe-apollo-socket": "^0.3.6",
+    "@r26d/absinthe-apollo-socket": "^1.0.0",
     "core-js": "^3.26.1",
     "graphql": "15.8.0",
     "ramda": "^0.28.0",
