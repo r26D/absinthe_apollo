@@ -4,7 +4,8 @@
   "scripts": {
     "install_all": "lerna exec -- npm install",
     "update": "npx lernaupdate",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "prettier": "prettier -w packages"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",

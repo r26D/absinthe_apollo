@@ -1,2 +1,2 @@
-import  createAbsintheApolloLink  from './createAbsintheApolloLink'
-export {  createAbsintheApolloLink }
+import createAbsintheApolloLink from './createAbsintheApolloLink'
+export { createAbsintheApolloLink }

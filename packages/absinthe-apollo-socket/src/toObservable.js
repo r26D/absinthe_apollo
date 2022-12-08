@@ -13,13 +13,15 @@ const getUnsubscriber = (absintheSocket, {request}, observer, unsubscribe) =>
     unsubscribe(absintheSocket, notifier, notifier ? observer: undefined);
   };
 
-const onResult = ({ operationType }, observableObserver) => (result) => {
-  observableObserver.next(result)
+const onResult =
+  ({ operationType }, observableObserver) =>
+  (result) => {
+    observableObserver.next(result)
 
-  if (operationType !== 'subscription') {
-    observableObserver.complete()
+    if (operationType !== 'subscription') {
+      observableObserver.complete()
+    }
   }
-}
 
 const createObserver = (notifier, handlers, observableObserver) => ({
   ...handlers,

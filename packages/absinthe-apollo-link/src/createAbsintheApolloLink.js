@@ -1,9 +1,13 @@
 import { ApolloLink } from '@apollo/client'
-import { send, toObservable, unobserveOrCancel } from '@r26d/absinthe-apollo-socket'
+import {
+  send,
+  toObservable,
+  unobserveOrCancel
+} from '@r26d/absinthe-apollo-socket'
 //import compose from 'ramda/src/compose'
 //12/7/22 - this is not compatible with node 18
 //https://github.com/ramda/ramda/commit/d0099847b50660f3ddefc528c0813e9983d6b394
-import {compose} from "ramda"
+import { compose } from 'ramda'
 import { print } from 'graphql'
 
 const unobserveOrCancelIfNeeded = (absintheSocket, notifier, observer) => {

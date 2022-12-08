@@ -36,36 +36,38 @@ const onAbort = (deferred, callback) => (error) => {
  * Creates a Subscriber (Relay SubscribeFunction) using the given AbsintheSocket
  * instance
  */
-const createSubscriber = (absintheSocket, onRecoverableError) => (
-  { text: operation },
-  variables,
-  cacheConfig,
-  { onError: OnUnrecoverableError, onNext }
-) => {
-  // we need to place this logic here and not in ensureIsSubscription as if we
-  // do so, then flow is not able to infer we are validating operation
-  if (!operation || getOperationType(operation) !== 'subscription') {
-    throw new Error(`Expected subscription, but instead got:\n${operation}`)
+const createSubscriber =
+  (absintheSocket, onRecoverableError) =>
+  (
+    { text: operation },
+    variables,
+    cacheConfig,
+    { onError: OnUnrecoverableError, onNext }
+  ) => {
+    // we need to place this logic here and not in ensureIsSubscription as if we
+    // do so, then flow is not able to infer we are validating operation
+    if (!operation || getOperationType(operation) !== 'subscription') {
+      throw new Error(`Expected subscription, but instead got:\n${operation}`)
+    }
+
+    const notifier = send(absintheSocket, { operation, variables })
+
+    const deferred = createDeferred()
+
+    const observer = {
+      onAbort: onAbort(deferred, OnUnrecoverableError),
+      onError: onRecoverableError,
+      onResult: onNext,
+      onStart: onStart(deferred)
+    }
+
+    observe(absintheSocket, notifier, observer)
+
+    const disposable = createDisposable(absintheSocket, notifier, observer)
+
+    subscriptions.set(disposable, deferred.promise)
+
+    return disposable
   }
-
-  const notifier = send(absintheSocket, { operation, variables })
-
-  const deferred = createDeferred()
-
-  const observer = {
-    onAbort: onAbort(deferred, OnUnrecoverableError),
-    onError: onRecoverableError,
-    onResult: onNext,
-    onStart: onStart(deferred)
-  }
-
-  observe(absintheSocket, notifier, observer)
-
-  const disposable = createDisposable(absintheSocket, notifier, observer)
-
-  subscriptions.set(disposable, deferred.promise)
-
-  return disposable
-}
 
 export default createSubscriber

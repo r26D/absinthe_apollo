@@ -6,16 +6,18 @@ import {
   fallbackHttpConfig,
   serializeFetchParameter,
   createSignalIfSupported,
-  parseAndCheckHttpResponse,
+  parseAndCheckHttpResponse
 } from '@apollo/client'
-
 
 import lodashSet from 'lodash/set'
 
 import { customAlphabet } from 'nanoid'
-const nanoid = customAlphabet('1234567890abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWYZ', 10)
+const nanoid = customAlphabet(
+  '1234567890abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWYZ',
+  10
+)
 
-import extractFiles  from "extract-files/extractFiles.mjs"
+import extractFiles from 'extract-files/extractFiles.mjs'
 //const extractFiles = () => {}
 // async function mjsLoader() {
 // const { extractFiles } = await import('extract-files/extractFiles.mjs')
@@ -25,13 +27,12 @@ import extractFiles  from "extract-files/extractFiles.mjs"
 //https://github.com/jaydenseric/extract-files/blob/v11.0.0/public/ReactNativeFile.js
 //Was removed in more recent
 export class ReactNativeFile {
-  constructor({uri, name, type}) {
-    this.uri = uri;
-    this.name = name;
-    this.type = type;
+  constructor({ uri, name, type }) {
+    this.uri = uri
+    this.name = name
+    this.type = type
   }
-};
-
+}
 
 /**
  * GraphQL request `fetch` options.
@@ -71,18 +72,18 @@ export class ReactNativeFile {
  * ```
  */
 export const createUploadLink = ({
-                              uri: fetchUri = '/graphql',
-                              fetch: linkFetch = fetch,
-                              fetchOptions,
-                              credentials,
-                              headers,
-                              includeExtensions,
-                            } = {}) => {
+  uri: fetchUri = '/graphql',
+  fetch: linkFetch = fetch,
+  fetchOptions,
+  credentials,
+  headers,
+  includeExtensions
+} = {}) => {
   const linkConfig = {
-    http: {includeExtensions},
+    http: { includeExtensions },
     options: fetchOptions,
     credentials,
-    headers,
+    headers
   }
 
   return new ApolloLink((operation) => {
@@ -94,8 +95,8 @@ export const createUploadLink = ({
 
     const {
       // From Apollo Client config.
-      clientAwareness: {name, version} = {},
-      headers,
+      clientAwareness: { name, version } = {},
+      headers
     } = context
 
     const contextConfig = {
@@ -104,20 +105,20 @@ export const createUploadLink = ({
       credentials: context.credentials,
       headers: {
         // Client awareness headers are context overridable.
-        ...(name && {'apollographql-client-name': name}),
-        ...(version && {'apollographql-client-version': version}),
-        ...headers,
-      },
+        ...(name && { 'apollographql-client-name': name }),
+        ...(version && { 'apollographql-client-version': version }),
+        ...headers
+      }
     }
 
-    const {options, body} = selectHttpOptionsAndBody(
+    const { options, body } = selectHttpOptionsAndBody(
       operation,
       fallbackHttpConfig,
       linkConfig,
       contextConfig
     )
 
-    const {clone, files} = extractFiles(body)
+    const { clone, files } = extractFiles(body)
 
     const payload = serializeFetchParameter(clone, 'Payload')
     if (files.size) {
@@ -129,7 +130,7 @@ export const createUploadLink = ({
 
       const form = new FormData()
 
-      const {query, operationName, variables} = body
+      const { query, operationName, variables } = body
       form.append('query', query)
       form.append('operationName', operationName)
 
@@ -156,7 +157,7 @@ export const createUploadLink = ({
       // default abort controller.
       let abortController
       if (!options.signal) {
-        const {controller} = createSignalIfSupported()
+        const { controller } = createSignalIfSupported()
         if (controller) {
           abortController = controller
           options.signal = abortController.signal
@@ -166,7 +167,7 @@ export const createUploadLink = ({
       linkFetch(uri, options)
         .then((response) => {
           // Forward the response on the context.
-          operation.setContext({response})
+          operation.setContext({ response })
           return response
         })
         .then(parseAndCheckHttpResponse(operation))
@@ -179,7 +180,10 @@ export const createUploadLink = ({
             // Fetch was aborted.
             return
           }
-          if (error.name === 'TypeError' && error.message.match("Failed to fetch")) {
+          if (
+            error.name === 'TypeError' &&
+            error.message.match('Failed to fetch')
+          ) {
             // The endpoint is not responding
             return
           }

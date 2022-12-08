@@ -37,15 +37,11 @@ Modified to support standard absinthe errors:
 
 const createRequestError = (message) => {
   if (message?.errors) {
-    return(message.errors);
+    return message.errors
+  } else {
+    return { errors: [{ message: message }] }
   }
-  else {
-    return({errors: [{message: message}]});
-  }
-
 }
-
-
 
 const onTimeout = (absintheSocket, notifier) =>
   notifierNotifyActive(

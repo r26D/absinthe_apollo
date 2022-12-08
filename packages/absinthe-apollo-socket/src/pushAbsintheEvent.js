@@ -5,15 +5,16 @@ import { map } from '@jumpn/utils-composite'
 import handlePush from './handlePush'
 import notifierFind from './notifier/find'
 
-const getPushHandlerMethodGetter = (absintheSocket, request) => (handle) => (
-  ...args
-) => {
-  const notifier = notifierFind(absintheSocket.notifiers, 'request', request)
+const getPushHandlerMethodGetter =
+  (absintheSocket, request) =>
+  (handle) =>
+  (...args) => {
+    const notifier = notifierFind(absintheSocket.notifiers, 'request', request)
 
-  if (notifier) {
-    handle(absintheSocket, notifier, ...args)
+    if (notifier) {
+      handle(absintheSocket, notifier, ...args)
+    }
   }
-}
 
 const getPushHandler = (absintheSocket, request, notifierPushHandler) =>
   map(getPushHandlerMethodGetter(absintheSocket, request), notifierPushHandler)

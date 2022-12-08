@@ -1,4 +1,3 @@
-
 const handlePush = (push, handler) =>
   push
     .receive('ok', handler.onSucceed)
