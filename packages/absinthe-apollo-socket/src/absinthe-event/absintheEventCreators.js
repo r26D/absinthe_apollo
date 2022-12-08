@@ -1,6 +1,6 @@
 //
 
-import absintheEventNames from './absintheEventNames'
+import absintheEventNames from './absintheEventNames.js'
 
 const createAbsintheUnsubscribeEvent = (payload) => ({
   payload,

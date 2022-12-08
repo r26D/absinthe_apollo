@@ -1,9 +1,7 @@
-//
-
 import Observable from 'zen-observable'
 
-import notifierFind from './notifier/find'
-import observe from './observe'
+import notifierFind from './notifier/find.js'
+import observe from './observe.js'
 
 // prettier-ignore
 const getUnsubscriber = (absintheSocket, {request}, observer, unsubscribe) =>

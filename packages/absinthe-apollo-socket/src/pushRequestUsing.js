@@ -2,13 +2,13 @@
 
 import { requestToCompat } from '@jumpn/utils-graphql'
 
-import abortNotifier from './abortNotifier'
-import notifierNotifyActive from './notifier/notifyActive'
-import pushAbsintheEvent from './pushAbsintheEvent'
-import refreshNotifier from './refreshNotifier'
-import requestStatuses from './notifier/requestStatuses'
-import { createAbsintheDocEvent } from './absinthe-event/absintheEventCreators'
-import { createErrorEvent } from './notifier/event/eventCreators'
+import abortNotifier from './abortNotifier.js'
+import notifierNotifyActive from './notifier/notifyActive.js'
+import pushAbsintheEvent from './pushAbsintheEvent.js'
+import refreshNotifier from './refreshNotifier.js'
+import requestStatuses from './notifier/requestStatuses.js'
+import { createAbsintheDocEvent } from './absinthe-event/absintheEventCreators.js'
+import { createErrorEvent } from './notifier/event/eventCreators.js'
 
 const pushAbsintheDocEvent = (
   absintheSocket,

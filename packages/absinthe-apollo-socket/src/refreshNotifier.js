@@ -1,7 +1,5 @@
-//
-
-import notifierRefresh from './notifier/refresh'
-import updateNotifiers from './updateNotifiers'
+import notifierRefresh from './notifier/refresh.js'
+import updateNotifiers from './updateNotifiers.js'
 
 const refreshNotifier = (absintheSocket, notifier) => {
   updateNotifiers(absintheSocket, notifierRefresh(notifier))

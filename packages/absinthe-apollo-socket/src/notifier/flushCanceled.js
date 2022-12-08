@@ -1,7 +1,7 @@
 //
 
-import notifyCanceled from './notifyCanceled'
-import { createCancelEvent } from './event/eventCreators'
+import notifyCanceled from './notifyCanceled.js'
+import { createCancelEvent } from './event/eventCreators.js'
 
 const clearCanceled = (notifier) => ({
   ...notifier,

@@ -1,7 +1,7 @@
 //
 
-import notifierObserve from './notifier/observe'
-import refreshNotifier from './refreshNotifier'
+import notifierObserve from './notifier/observe.js'
+import refreshNotifier from './refreshNotifier.js'
 
 /**
  * Observes given notifier using the provided observer

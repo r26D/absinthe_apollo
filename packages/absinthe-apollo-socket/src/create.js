@@ -1,16 +1,12 @@
-//
-
-import { Socket as PhoenixSocket } from 'phoenix'
-
-import abortNotifier from './abortNotifier'
-import joinChannel from './joinChannel'
-import notifierNotify from './notifier/notify'
-import notifierRemove from './notifier/remove'
-import notifierReset from './notifier/reset'
-import refreshNotifier from './refreshNotifier'
-import updateNotifiers from './updateNotifiers'
-import * as withSubscription from './subscription'
-import { createErrorEvent } from './notifier/event/eventCreators'
+import abortNotifier from './abortNotifier.js'
+import joinChannel from './joinChannel.js'
+import notifierNotify from './notifier/notify.js'
+import notifierRemove from './notifier/remove.js'
+import notifierReset from './notifier/reset.js'
+import refreshNotifier from './refreshNotifier.js'
+import updateNotifiers from './updateNotifiers.js'
+import * as withSubscription from './subscription.js'
+import { createErrorEvent } from './notifier/event/eventCreators.js'
 
 const onMessage = (absintheSocket) => (message) => {
   if (withSubscription.isDataMessage(message)) {

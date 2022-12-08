@@ -1,10 +1,10 @@
-import cancel from './cancel'
-import create from './create'
-import observe from './observe'
-import send from './send'
-import toObservable from './toObservable'
-import unobserve from './unobserve'
-import unobserveOrCancel from './unobserveOrCancel'
+import cancel from './cancel.js'
+import create from './create.js'
+import observe from './observe.js'
+import send from './send.js'
+import toObservable from './toObservable.js'
+import unobserve from './unobserve.js'
+import unobserveOrCancel from './unobserveOrCancel.js'
 
 export {
   cancel,

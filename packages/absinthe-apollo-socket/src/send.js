@@ -2,15 +2,15 @@
 
 import { append } from '@jumpn/utils-array'
 
-import joinChannel from './joinChannel'
-import notifierCreate from './notifier/create'
-import notifierFind from './notifier/find'
-import notifierFlushCanceled from './notifier/flushCanceled'
-import notifierReactivate from './notifier/reactivate'
-import pushRequest from './pushRequest'
-import refreshNotifier from './refreshNotifier'
-import requestStatuses from './notifier/requestStatuses'
-import updateNotifiers from './updateNotifiers'
+import joinChannel from './joinChannel.js'
+import notifierCreate from './notifier/create.js'
+import notifierFind from './notifier/find.js'
+import notifierFlushCanceled from './notifier/flushCanceled.js'
+import notifierReactivate from './notifier/reactivate.js'
+import pushRequest from './pushRequest.js'
+import refreshNotifier from './refreshNotifier.js'
+import requestStatuses from './notifier/requestStatuses.js'
+import updateNotifiers from './updateNotifiers.js'
 
 const connectOrJoinChannel = (absintheSocket) => {
   if (absintheSocket.phoenixSocket.isConnected()) {

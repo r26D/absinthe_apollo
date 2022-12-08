@@ -1,7 +1,5 @@
-//
-
-import cancel from './cancel'
-import unobserve from './unobserve'
+import cancel from './cancel.js'
+import unobserve from './unobserve.js'
 
 const doUnobserveOrCancel = (absintheSocket, notifier, observer) =>
   notifier.activeObservers.length === 1

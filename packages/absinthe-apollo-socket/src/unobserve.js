@@ -1,8 +1,6 @@
-//
-
-import notifierRefresh from './notifier/refresh'
-import notifierUnobserve from './notifier/unobserve'
-import updateNotifiers from './updateNotifiers'
+import notifierRefresh from './notifier/refresh.js'
+import notifierUnobserve from './notifier/unobserve.js'
+import updateNotifiers from './updateNotifiers.js'
 
 const ensureHasActiveObserver = (notifier, observer) => {
   if (notifier.activeObservers.includes(observer)) return notifier

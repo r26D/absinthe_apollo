@@ -1,7 +1,7 @@
 //
 
-import flushCanceled from './flushCanceled'
-import requestStatuses from './requestStatuses'
+import flushCanceled from './flushCanceled.js'
+import requestStatuses from './requestStatuses.js'
 
 const reset = (notifier) =>
   flushCanceled({

@@ -1,2 +1,2 @@
-import createAbsintheApolloLink from './createAbsintheApolloLink'
+import createAbsintheApolloLink from './createAbsintheApolloLink.js'
 export { createAbsintheApolloLink }

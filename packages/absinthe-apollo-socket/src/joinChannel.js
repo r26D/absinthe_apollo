@@ -1,9 +1,9 @@
 //
 
-import handlePush from './handlePush'
-import notifierNotifyActive from './notifier/notifyActive'
-import pushRequest from './pushRequest'
-import { createErrorEvent } from './notifier/event/eventCreators'
+import handlePush from './handlePush.js'
+import notifierNotifyActive from './notifier/notifyActive.js'
+import pushRequest from './pushRequest.js'
+import { createErrorEvent } from './notifier/event/eventCreators.js'
 
 const createChannelJoinError = (message) =>
   new Error(`channel join: ${message}`)

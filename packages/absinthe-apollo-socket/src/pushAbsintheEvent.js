@@ -2,8 +2,8 @@
 
 import { map } from '@jumpn/utils-composite'
 
-import handlePush from './handlePush'
-import notifierFind from './notifier/find'
+import handlePush from './handlePush.js'
+import notifierFind from './notifier/find.js'
 
 const getPushHandlerMethodGetter =
   (absintheSocket, request) =>

@@ -1,9 +1,9 @@
 //
 
-import notifierNotify from './notifier/notify'
-import notifierRemove from './notifier/remove'
-import updateNotifiers from './updateNotifiers'
-import { createAbortEvent } from './notifier/event/eventCreators'
+import notifierNotify from './notifier/notify.js'
+import notifierRemove from './notifier/remove.js'
+import updateNotifiers from './updateNotifiers.js'
+import { createAbortEvent } from './notifier/event/eventCreators.js'
 
 const abortNotifier = (absintheSocket, notifier, error) =>
   updateNotifiers(

@@ -1,13 +1,11 @@
-//
-
-import notifierCancel from './notifier/cancel'
-import notifierFlushCanceled from './notifier/flushCanceled'
-import notifierRefresh from './notifier/refresh'
-import notifierRemove from './notifier/remove'
-import refreshNotifier from './refreshNotifier'
-import requestStatuses from './notifier/requestStatuses'
-import updateNotifiers from './updateNotifiers'
-import { unsubscribe } from './subscription'
+import notifierCancel from './notifier/cancel.js'
+import notifierFlushCanceled from './notifier/flushCanceled.js'
+import notifierRefresh from './notifier/refresh.js'
+import notifierRemove from './notifier/remove.js'
+import refreshNotifier from './refreshNotifier.js'
+import requestStatuses from './notifier/requestStatuses.js'
+import updateNotifiers from './updateNotifiers.js'
+import { unsubscribe } from './subscription.js'
 
 const cancelQueryOrMutationSending = (absintheSocket, notifier) =>
   updateNotifiers(

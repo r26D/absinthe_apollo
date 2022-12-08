@@ -1,13 +1,13 @@
 //
 
-import notifierNotifyResultEvent from './notifier/notifyResultEvent'
-import notifierNotifyStartEvent from './notifier/notifyStartEvent'
-import notifierRemove from './notifier/remove'
-import pushRequestUsing from './pushRequestUsing'
-import refreshNotifier from './refreshNotifier'
-import requestStatuses from './notifier/requestStatuses'
-import updateNotifiers from './updateNotifiers'
-import { subscribe } from './subscription'
+import notifierNotifyResultEvent from './notifier/notifyResultEvent.js'
+import notifierNotifyStartEvent from './notifier/notifyStartEvent.js'
+import notifierRemove from './notifier/remove.js'
+import pushRequestUsing from './pushRequestUsing.js'
+import refreshNotifier from './refreshNotifier.js'
+import requestStatuses from './notifier/requestStatuses.js'
+import updateNotifiers from './updateNotifiers.js'
+import { subscribe } from './subscription.js'
 
 const setNotifierRequestStatusSent = (absintheSocket, notifier) =>
   refreshNotifier(absintheSocket, {

@@ -42,4 +42,4 @@ const createAbsintheApolloLink = function(absintheSocket, onError, onStart) {
         )
     )
 }
-export default createAbsintheApolloLink
+export default createAbsintheApolloLink;

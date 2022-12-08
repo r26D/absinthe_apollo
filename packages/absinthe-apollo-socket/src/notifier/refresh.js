@@ -2,7 +2,7 @@
 
 import { replace as arrayReplace } from '@jumpn/utils-array'
 
-import findIndex from './findIndex'
+import findIndex from './findIndex.js'
 
 const refresh = (notifier) => (notifiers) =>
   arrayReplace(

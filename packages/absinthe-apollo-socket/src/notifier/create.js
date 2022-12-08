@@ -2,7 +2,7 @@
 
 import { getOperationType } from '@jumpn/utils-graphql'
 
-import requestStatuses from './requestStatuses'
+import requestStatuses from './requestStatuses.js'
 
 const createUsing = (request, operationType) => ({
   operationType,

@@ -1,5 +1,3 @@
-//
-
 const updateNotifiers = (absintheSocket, updater) => {
   absintheSocket.notifiers = updater(absintheSocket.notifiers)
 

@@ -1,6 +1,6 @@
 //
 
-import eventNames from './eventNames'
+import eventNames from './eventNames.js'
 
 const createStartEvent = (payload) => ({ payload, name: eventNames.start })
 

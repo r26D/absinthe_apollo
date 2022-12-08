@@ -1,3 +1,3 @@
 //
 
-import eventNames from './event/eventNames'
+import eventNames from './event/eventNames.js'
