@@ -34,12 +34,16 @@
     "react",
     "native"
   ],
-  "module": "lib/index.js",
   "files": [
     "lib",
     "src"
   ],
-  "main": "lib/index.js",
+  "type": "module",
+  "_main": "lib/index.js",
+  "module": "lib/index.js",
+  "exports": {
+    "import": "./lib/index.js"
+  },
   "react-native": "src/index",
   "sideEffects": false,
   "engines": {

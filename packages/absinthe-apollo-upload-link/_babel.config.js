@@ -9,6 +9,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: ['@babel/transform-runtime'],
-  exclude: ["proposal-dynamic-import"]
+  plugins: ['@babel/transform-runtime']
 }

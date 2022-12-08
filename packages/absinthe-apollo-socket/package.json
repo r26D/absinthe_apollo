@@ -1,13 +1,17 @@
 {
-  "name": "@r26d/absinthe-apollo-link",
+  "name": "@r26d/absinthe-apollo-socket",
   "version": "0.3.6",
-  "description": "Special Apollo Link with Absinthe Support",
-  "module": "lib/index.js",
+  "description": "Absinthe Socket - Allows the connection",
   "files": [
     "lib",
     "src"
   ],
-  "main": "lib/index.js",
+  "type": "module",
+  "_main": "lib/index.js",
+  "module": "lib/index.js",
+  "exports": {
+    "import": "./lib/index.js"
+  },
   "react-native": "src/index",
   "scripts": {
     "version": "nps version",
@@ -37,20 +41,16 @@
     "absinthe",
     "phoenix",
     "socket",
-    "apollo",
-    "link",
-    "apollo-link",
     "client",
     "graphql",
     "utilities",
     "utils"
   ],
   "dependencies": {
-    "@apollo/client": "^3.7.2",
-    "@r26d/absinthe-apollo-socket": "^0.3.6",
+    "@jumpn/utils-array": "0.3.4",
+    "@jumpn/utils-composite": "0.7.0",
+    "@jumpn/utils-graphql": "0.6.0",
     "core-js": "^3.26.1",
-    "graphql": "15.8.0",
-    "ramda": "^0.28.0",
     "zen-observable": "0.10.0"
   },
   "devDependencies": {
@@ -62,6 +62,9 @@
     "@babel/runtime": "^7.20.6",
     "nps": "5.10.0",
     "prettier": "^2.8.0"
+  },
+  "peerDependencies": {
+    "phoenix": "*"
   },
   "publishConfig": {
     "access": "public"

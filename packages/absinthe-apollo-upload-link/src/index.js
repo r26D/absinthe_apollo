@@ -15,16 +15,16 @@ import lodashSet from 'lodash/set'
 import { customAlphabet } from 'nanoid'
 const nanoid = customAlphabet('1234567890abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWYZ', 10)
 
-
-
-async function mjsLoader() {
-const { extractFiles } = await import('extract-files/extractFiles.mjs')
-  return extractFiles
-}
-const extractFiles = mjsLoader()
+import extractFiles  from "extract-files/extractFiles.mjs"
+//const extractFiles = () => {}
+// async function mjsLoader() {
+// const { extractFiles } = await import('extract-files/extractFiles.mjs')
+//   return extractFiles
+// }
+// const extractFiles = mjsLoader()
 //https://github.com/jaydenseric/extract-files/blob/v11.0.0/public/ReactNativeFile.js
 //Was removed in more recent
-class ReactNativeFile {
+export class ReactNativeFile {
   constructor({uri, name, type}) {
     this.uri = uri;
     this.name = name;
@@ -32,7 +32,6 @@ class ReactNativeFile {
   }
 };
 
-exports.ReactNativeFile = ReactNativeFile
 
 /**
  * GraphQL request `fetch` options.
@@ -71,7 +70,7 @@ exports.ReactNativeFile = ReactNativeFile
  * })
  * ```
  */
-exports.createUploadLink = ({
+export const createUploadLink = ({
                               uri: fetchUri = '/graphql',
                               fetch: linkFetch = fetch,
                               fetchOptions,

@@ -23,11 +23,11 @@
     "prettier": "^2.8.0"
   },
   "dependencies": {
-    "@r26d/absinthe-apollo-link": "file:packages/link",
-    "@r26d/absinthe-apollo-socket": "file:packages/socket",
-    "@r26d/absinthe-apollo-socket-graphiql": "file:packages/socket-graphiql",
-    "@r26d/absinthe-apollo-socket-relay": "file:packages/socket-relay",
-    "@r26d/absinthe-apollo-upload-middleware": "file:packages/upload-middleware",
-    "@r26d/absinthe-apollo-upload-link": "file:packages/upload-link"
+    "@r26d/absinthe-apollo-link": "file:packages/absinthe-apollo-link",
+    "@r26d/absinthe-apollo-socket": "file:packages/absinthe-apollo-socket",
+    "@r26d/absinthe-apollo-socket-graphiql": "file:packages/absinthe-apollo-socket-graphiql",
+    "@r26d/absinthe-apollo-socket-relay": "file:packages/absinthe-apollo-socket-relay",
+    "@r26d/absinthe-apollo-upload-middleware": "file:packages/absinthe-apollo-upload-middleware",
+    "@r26d/absinthe-apollo-upload-link": "file:packages/absinthe-apollo-upload-link"
   }
 }
