@@ -1,5 +1,4 @@
-import { ApolloLink } from '@apollo/client';
-
+import {ApolloLink}  from '@apollo/client/link/core/index.js'
 import {
   send,
   toObservable,
