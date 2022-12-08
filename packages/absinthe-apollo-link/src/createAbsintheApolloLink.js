@@ -1,4 +1,5 @@
-import { ApolloLink } from '@apollo/client'
+import { ApolloLink } from '@apollo/client';
+
 import {
   send,
   toObservable,
@@ -32,13 +33,13 @@ const getRequest = ({ query, variables }) => ({
  * Creates a terminating ApolloLink to request operations using given
  * AbsintheSocket instance
  */
-const createAbsintheApolloLink = (absintheSocket, onError, onStart) =>
-  new ApolloLink(
-    compose(
-      notifierToObservable(absintheSocket, onError, onStart),
-      (request) => send(absintheSocket, request),
-      getRequest
+const createAbsintheApolloLink = function(absintheSocket, onError, onStart) {
+    return new ApolloLink(
+        compose(
+            notifierToObservable(absintheSocket, onError, onStart),
+            (request) => send(absintheSocket, request),
+            getRequest
+        )
     )
-  )
-
+}
 export default createAbsintheApolloLink
