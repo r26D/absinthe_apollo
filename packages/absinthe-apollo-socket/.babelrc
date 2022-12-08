@@ -5,7 +5,11 @@
   "presets": [
     [
       "@babel/preset-env",
-      {"modules": false, "spec": true, "useBuiltIns": "usage", "corejs": 3}
+      {"modules": false,
+        "spec": true,
+       "useBuiltIns": "usage",
+        "corejs": 3.26
+      }
     ]
   ]
 }

@@ -1,2 +1,4 @@
-import createUploadLink from './createUploadLink'
-export { createUploadLink }
+import createUploadLink from "./createUploadLink.js"
+
+
+export {createUploadLink}

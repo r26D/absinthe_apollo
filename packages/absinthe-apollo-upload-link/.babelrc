@@ -1,12 +1,17 @@
 {
   "plugins": [
-    "@babel/plugin-proposal-class-properties",
-    '@babel/transform-runtime'
+    "@babel/plugin-proposal-class-properties"
   ],
   "presets": [
     [
       "@babel/preset-env",
-      {"modules": false, "spec": true, "useBuiltIns": "usage", "corejs": 3}
+      {
+        "modules": false,
+        "debug": true,
+        "spec": true,
+        "useBuiltIns": "usage",
+        "corejs": 3.26
+      }
     ]
   ]
 }

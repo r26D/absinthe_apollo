@@ -1,16 +1,3 @@
-// import {
-
-//   fallbackHttpConfig,
-//   serializeFetchParameter,
-
-//   selectHttpOptionsAndBody,
-//   createSignalIfSupported,
-//   ApolloLink,
-//   Observable,
-//   selectURI,
-//   parseAndCheckHttpResponse
-// } from '@apollo/client'
-
 import {ApolloLink}  from '@apollo/client/link/core/index.js'
 import {selectHttpOptionsAndBody,
   serializeFetchParameter,
@@ -84,7 +71,7 @@ export class ReactNativeFile {
  * })
  * ```
  */
- const createUploadLink = function(args ) {
+ const createUploadLink = function(args) {
 
    const {
      uri: fetchUri = '/graphql',
