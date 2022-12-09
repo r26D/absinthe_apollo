@@ -1,30 +1,38 @@
-import {ApolloLink}  from '@apollo/client/link/core/index.js'
-import {selectHttpOptionsAndBody,
+import { ApolloLink } from '@apollo/client/link/core/index.js'
+import {
+  selectHttpOptionsAndBody,
   serializeFetchParameter,
   fallbackHttpConfig,
   createSignalIfSupported,
   parseAndCheckHttpResponse,
   selectURI
-}  from '@apollo/client/link/http/index.js'
-import {Observable}  from '@apollo/client/utilities/index.js';
+} from '@apollo/client/link/http/index.js'
+import { Observable } from '@apollo/client/utilities/index.js'
 
 
-
-import {set as lodashSet} from 'lodash-es';
+import { set as lodashSet } from 'lodash-es'
 import { customAlphabet } from 'nanoid'
+
 const nanoid = customAlphabet(
   '1234567890abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWYZ',
   10
 )
-
+// import * as ef from 'extract-files/public/index.mjs'
+// const extractFiles = ef.extractFiles
+// const ReactNativeFile = ef.ReactNativeFile
+// import ef from "extract-files/public/index.js"
+//  const extractFiles = ef.extractFiles
+//  const ReactNativeFile = ef.ReactNativeFile
+// import extractFiles from 'extract-files/extractFiles.js'
+// import ReactNativeFile from 'extract-files/ReactNativeFile.js'
+// const extractFiles = require("extract-files/public/extractFiles.js");
+// const ReactNativeFile  = require("extract-files/public/ReactNativeFile.js");
+import { extractFiles, ReactNativeFile } from 'extract-files';
+//These imports are for supporting the v13 and later of extract-files
+/*
 import extractFiles from 'extract-files/extractFiles.mjs'
-//const extractFiles = () => {}
-// async function mjsLoader() {
-// const { extractFiles } = await import('extract-files/extractFiles.mjs')
-//   return extractFiles
-// }
-// const extractFiles = mjsLoader()
 //https://github.com/jaydenseric/extract-files/blob/v11.0.0/public/ReactNativeFile.js
+//
 //Was removed in more recent
 export class ReactNativeFile {
   constructor({ uri, name, type }) {
@@ -33,7 +41,7 @@ export class ReactNativeFile {
     this.type = type
   }
 }
-
+*/
 /**
  * GraphQL request `fetch` options.
  * @kind typedef
@@ -71,16 +79,16 @@ export class ReactNativeFile {
  * })
  * ```
  */
- const createUploadLink = function(args) {
+const createUploadLink = function(args) {
 
-   const {
-     uri: fetchUri = '/graphql',
-     fetch: linkFetch = fetch,
-     fetchOptions,
-     credentials,
-     headers,
-     includeExtensions
-   } = args || {};
+  const {
+    uri: fetchUri = '/graphql',
+    fetch: linkFetch = fetch,
+    fetchOptions,
+    credentials,
+    headers,
+    includeExtensions
+  } = args || {}
 
   const linkConfig = {
     http: { includeExtensions },
@@ -208,4 +216,5 @@ export class ReactNativeFile {
   })
 }
 
-export default createUploadLink;
+export default createUploadLink
+export { ReactNativeFile }
