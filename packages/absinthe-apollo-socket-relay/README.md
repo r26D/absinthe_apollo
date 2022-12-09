@@ -64,8 +64,8 @@ instance
 
 #### Parameters
 
-*   `absintheSocket` &#x20;
-*   `onError` &#x20;
+*   `absintheSocket`  
+*   `onError`  
 
 ### createSubscriber
 
@@ -74,8 +74,8 @@ instance
 
 #### Parameters
 
-*   `absintheSocket` &#x20;
-*   `onRecoverableError` &#x20;
+*   `absintheSocket`  
+*   `onRecoverableError`  
 
 ### isSubscribed
 
@@ -84,7 +84,7 @@ disposable has started or to `false` otherwise
 
 #### Parameters
 
-*   `disposable` &#x20;
+*   `disposable`  
 
 ## References
 

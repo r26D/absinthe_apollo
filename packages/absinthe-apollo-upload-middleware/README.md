@@ -107,11 +107,11 @@ A React Native file.
 
 #### Parameters
 
-*   `file` **[ReactNativeFileObject](#reactnativefileobject)**&#x20;
+*   `file` **[ReactNativeFileObject](#reactnativefileobject)** 
 
-    *   `file.uri` &#x20;
-    *   `file.type` &#x20;
-    *   `file.name` &#x20;
+    *   `file.uri`  
+    *   `file.type`  
+    *   `file.name`  
 
 ###
 
@@ -119,7 +119,7 @@ Creates an array of file instances.
 
 #### Parameters
 
-*   `files` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<[ReactNativeFileObject](#reactnativefileobject)>**&#x20;
+*   `files` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<[ReactNativeFileObject](#reactnativefileobject)>** 
 
 #### Examples
 

@@ -98,9 +98,9 @@ AbsintheSocket instance
 
 #### Parameters
 
-*   `absintheSocket` &#x20;
-*   `onError` &#x20;
-*   `onStart` &#x20;
+*   `absintheSocket`  
+*   `onError`  
+*   `onStart`  
 
 ## References
 
