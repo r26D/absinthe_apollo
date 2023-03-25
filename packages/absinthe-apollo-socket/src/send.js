@@ -1,6 +1,6 @@
 //
 
-import { append } from '@jumpn/utils-array'
+import { arrayAppend } from '@r26d/utils-graphql'
 
 import joinChannel from './joinChannel.js'
 import notifierCreate from './notifier/create.js'
@@ -24,7 +24,7 @@ const connectOrJoinChannel = (absintheSocket) => {
 const sendNew = (absintheSocket, request) => {
   const notifier = notifierCreate(request)
 
-  updateNotifiers(absintheSocket, append([notifier]))
+  updateNotifiers(absintheSocket, arrayAppend([notifier]))
 
   if (absintheSocket.channelJoinCreated) {
     pushRequest(absintheSocket, notifier)

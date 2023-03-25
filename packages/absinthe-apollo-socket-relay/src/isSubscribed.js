@@ -1,8 +1,6 @@
-//
-
-import { booleanize } from '@jumpn/utils-promise'
-
 import subscriptions from './subscriptions'
+
+import {booleanize} from "@r26d/utils-graphql"
 
 /**
  * Returns a promise that resolves to `true` in case subscription of given

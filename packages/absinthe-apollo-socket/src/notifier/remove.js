@@ -1,6 +1,6 @@
 //
 
-import { remove as arrayRemove } from '@jumpn/utils-array'
+import { arrayRemove } from '@r26d/utils-graphql'
 
 import findIndex from './findIndex.js'
 

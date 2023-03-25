@@ -1,6 +1,4 @@
-//
-
-import { errorsToString as gqlErrorsToString } from '@jumpn/utils-graphql'
+import { errorsToString as gqlErrorsToString } from '@r26d/utils-graphql'
 
 import abortNotifier from './abortNotifier.js'
 import notifierFind from './notifier/find.js'

@@ -1,11 +1,10 @@
-//
-
 import notifierFind from '@absinthe/socket/dist/notifier/find'
 import { observe, send, unobserveOrCancel } from '@absinthe/socket'
-import { createDeferred } from '@jumpn/utils-promise'
-import { getOperationType } from '@jumpn/utils-graphql'
+
+import { getOperationType, createDeferred } from '@r26d/utils-graphql'
 
 import subscriptions from './subscriptions'
+
 
 const unobserveOrCancelIfNeeded = (absintheSocket, notifier, observer) => {
   if (notifier) {

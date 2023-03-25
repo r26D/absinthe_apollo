@@ -1,6 +1,6 @@
 //
 
-import { getOperationType } from '@jumpn/utils-graphql'
+import { getOperationType } from '@r26d/utils-graphql'
 
 import requestStatuses from './requestStatuses.js'
 

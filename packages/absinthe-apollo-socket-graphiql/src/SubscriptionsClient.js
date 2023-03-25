@@ -1,7 +1,5 @@
-//
-
 import * as withAbsintheSocket from '@r26d/absinthe-apollo-socket'
-import { requestFromCompat } from '@jumpn/utils-graphql'
+import { requestFromCompat } from '@r26d/utils-graphql'
 import { Socket as PhoenixSocket } from 'phoenix'
 
 const observe = (subscriptionsClient, notifier, callback) =>

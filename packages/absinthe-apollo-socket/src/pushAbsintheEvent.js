@@ -1,6 +1,6 @@
 //
 
-import { map } from '@jumpn/utils-composite'
+import { compositeMap } from '@r26d/utils-graphql'
 
 import handlePush from './handlePush.js'
 import notifierFind from './notifier/find.js'
@@ -17,7 +17,7 @@ const getPushHandlerMethodGetter =
   }
 
 const getPushHandler = (absintheSocket, request, notifierPushHandler) =>
-  map(getPushHandlerMethodGetter(absintheSocket, request), notifierPushHandler)
+  compositeMap(getPushHandlerMethodGetter(absintheSocket, request), notifierPushHandler)
 
 const pushAbsintheEvent = (
   absintheSocket,

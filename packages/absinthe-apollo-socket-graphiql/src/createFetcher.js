@@ -1,8 +1,4 @@
-//
-
-import { getOperationType } from '@jumpn/utils-graphql'
-
-import SubscriptionClient from './SubscriptionsClient'
+import { getOperationType } from '@r26d/utils-graphql'
 
 const parseIfJson = (text) => {
   try {

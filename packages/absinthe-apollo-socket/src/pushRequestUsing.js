@@ -1,6 +1,6 @@
 //
 
-import { requestToCompat } from '@jumpn/utils-graphql'
+import { requestToCompat } from '@r26d/utils-graphql'
 
 import abortNotifier from './abortNotifier.js'
 import notifierNotifyActive from './notifier/notifyActive.js'
