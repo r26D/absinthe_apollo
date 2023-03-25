@@ -8,8 +8,7 @@
       {
         "modules": false,
         "spec": true,
-        "useBuiltIns": "usage",
-        "corejs": 3.26
+        "useBuiltIns": false
       }
     ]
   ]
