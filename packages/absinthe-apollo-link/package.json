@@ -48,6 +48,7 @@
     "@r26d/absinthe-apollo-socket": "^1.1.1",
     "core-js": "^3.29.1",
     "graphql": "15.8.0",
+    "rambda": "^7.5.0",
     "ramda": "^0.28.0",
     "zen-observable": "0.10.0"
   },
