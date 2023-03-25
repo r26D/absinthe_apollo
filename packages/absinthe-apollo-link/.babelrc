@@ -6,9 +6,10 @@
     [
       "@babel/preset-env",
       {
-        "modules": "auto",
+        "modules": false,
         "spec": true,
-        "useBuiltIns": false
+        "useBuiltIns": "usage",
+        "corejs": "3.29.1"
       }
     ]
   ]
