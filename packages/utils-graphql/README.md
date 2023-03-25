@@ -294,4 +294,4 @@ Returns **GqlRequestCompat\<Variables>**
 
 ## License
 
-[MIT](LICENSE.txt) :copyright: **Jumpn Limited**
+[MIT](LICENSE.txt) :copyright: \*\*r26D,LLC \*\*
