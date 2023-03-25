@@ -68,7 +68,7 @@ const client = new ApolloClient({
 
 import ApolloClient from "apollo-client";
 import {createHttpLink} from "apollo-link-http";
-import {hasSubscription} from "@jumpn/utils-graphql";
+import {hasSubscription} from "@r26d/utils-graphql";
 import {InMemoryCache} from "apollo-cache-inmemory";
 import {split} from "apollo-link";
 
