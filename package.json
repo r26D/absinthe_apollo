@@ -8,20 +8,20 @@
     "prettier": "prettier -w packages"
   },
   "devDependencies": {
-    "@babel/cli": "^7.19.3",
-    "@babel/core": "^7.20.5",
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.3",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
-    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/plugin-transform-runtime": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
     "doctoc": "2.2.1",
-    "documentation": "14.0.0",
-    "globby": "13.1.2",
+    "documentation": "14.0.1",
+    "globby": "13.1.3",
     "graphql": "^15.8.0",
-    "lerna": "6.1.0",
+    "lerna": "6.6.1",
     "lerna-update-wizard": "^1.1.2",
     "nps": "5.10.0",
     "pkg-to-readme": "1.1.2",
-    "prettier": "^2.8.0"
+    "prettier": "^2.8.7"
   },
   "dependencies": {
     "@r26d/absinthe-apollo-link": "file:packages/absinthe-apollo-link",
@@ -29,6 +29,7 @@
     "@r26d/absinthe-apollo-socket-graphiql": "file:packages/absinthe-apollo-socket-graphiql",
     "@r26d/absinthe-apollo-socket-relay": "file:packages/absinthe-apollo-socket-relay",
     "@r26d/absinthe-apollo-upload-middleware": "file:packages/absinthe-apollo-upload-middleware",
-    "@r26d/absinthe-apollo-upload-link": "file:packages/absinthe-apollo-upload-link"
+    "@r26d/absinthe-apollo-upload-link": "file:packages/absinthe-apollo-upload-link",
+    "@r26d/utils-graphql": "file:packages/utils-graphql"
   }
 }
