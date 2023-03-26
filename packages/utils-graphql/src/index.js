@@ -1,16 +1,16 @@
-import errorsToString from './errorsToString'
-import getOperationType from './getOperationType'
-import hasSubscription from './hasSubscription'
-import requestFromCompat from './requestFromCompat'
-import requestToCompat from './requestToCompat'
-import arrayAppend from './arrayAppend'
-import arrayRemove from './arrayRemove'
-import arrayReplace from './arrayReplace'
+import errorsToString from './errorsToString.js'
+import getOperationType from './getOperationType.js'
+import hasSubscription from './hasSubscription.js'
+import requestFromCompat from './requestFromCompat.js'
+import requestToCompat from './requestToCompat.js'
+import arrayAppend from './arrayAppend.js'
+import arrayRemove from './arrayRemove.js'
+import arrayReplace from './arrayReplace.js'
 
-import compositeMap from './compositeMap'
-import compositeHasIn from './compositeHasIn'
-import createDeferred from './createDeferred'
-import booleanize from './booleanize.js'
+import compositeMap from './compositeMap.js'
+import compositeHasIn from './compositeHasIn.js'
+import createDeferred from './createDeferred.js'
+import booleanize from './booleanize.js.js'
 export {
   errorsToString,
   getOperationType,
