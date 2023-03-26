@@ -10,7 +10,7 @@ import arrayReplace from './arrayReplace.js'
 import compositeMap from './compositeMap.js'
 import compositeHasIn from './compositeHasIn.js'
 import createDeferred from './createDeferred.js'
-import booleanize from './booleanize.js.js'
+import booleanize from './booleanize.js'
 export {
   errorsToString,
   getOperationType,
