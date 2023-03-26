@@ -71,5 +71,5 @@
   "exports": {
     "import": "./lib/index.js"
   },
-  "gitHead": "9054c399b3e6120df5ab39498609c1ceb6c8d7f8"
+  "gitHead": "46d138a0153bb172d2a7632a969d24365e4ca75f"
 }
