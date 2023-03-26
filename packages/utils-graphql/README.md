@@ -101,8 +101,8 @@ Returns a new Array with elements appended to the one given.
 
 #### Parameters
 
-*   `elements`  
-*   `array`  
+*   `elements` &#x20;
+*   `array` &#x20;
 
 ### arrayRemoveFn
 
@@ -111,9 +111,9 @@ Returns a new Array with the result of having removed the specified amount
 
 #### Parameters
 
-*   `index`  
-*   `count`  
-*   `array`  
+*   `index` &#x20;
+*   `count` &#x20;
+*   `array` &#x20;
 
 ### arrayReplaceFn
 
@@ -122,9 +122,9 @@ given index with the ones specified.
 
 #### Parameters
 
-*   `index`  
-*   `elements`  
-*   `array`  
+*   `index` &#x20;
+*   `elements` &#x20;
+*   `array` &#x20;
 
 ### booleanize
 
@@ -133,7 +133,7 @@ there was no error, or false otherwise
 
 #### Parameters
 
-*   `promise`  
+*   `promise` &#x20;
 
 ### get
 
@@ -141,8 +141,8 @@ Get property value of given key.
 
 #### Parameters
 
-*   `key`  
-*   `composite`  
+*   `key` &#x20;
+*   `composite` &#x20;
 
 ### getIn
 
@@ -150,8 +150,8 @@ Returns value located at the given path or undefined otherwise.
 
 #### Parameters
 
-*   `path`  
-*   `composite`  
+*   `path` &#x20;
+*   `composite` &#x20;
 
 ### compositeHasInFn
 
@@ -160,9 +160,9 @@ specified.
 
 #### Parameters
 
-*   `path`  
-*   `value`  
-*   `composite`  
+*   `path` &#x20;
+*   `value` &#x20;
+*   `composite` &#x20;
 
 ### compositeMap
 
@@ -170,8 +170,8 @@ Maps values of the given composite using mapper
 
 #### Parameters
 
-*   `mapper`  
-*   `composite`  
+*   `mapper` &#x20;
+*   `composite` &#x20;
 
 ### createDeferred
 
@@ -183,7 +183,7 @@ Transforms an array of GqlError into a string.
 
 #### Parameters
 
-*   `gqlErrors`  
+*   `gqlErrors` &#x20;
 
 #### Examples
 
@@ -207,7 +207,7 @@ Returns the type (query, mutation, or subscription) of the given operation
 
 #### Parameters
 
-*   `operation`  
+*   `operation` &#x20;
 
 #### Examples
 
@@ -232,7 +232,7 @@ Returns true if documentNode has a subscription or false otherwise
 
 #### Parameters
 
-*   `documentNode`  
+*   `documentNode` &#x20;
 
 ### requestFromCompat
 
@@ -240,10 +240,10 @@ Creates a GqlRequest using given GqlRequestCompat
 
 #### Parameters
 
-*   `gqlRequestCompat` **GqlRequestCompat\<Variables>** 
+*   `gqlRequestCompat` **GqlRequestCompat\<Variables>**&#x20;
 
-    *   `gqlRequestCompat.query`  
-    *   `gqlRequestCompat.variables`  
+    *   `gqlRequestCompat.query` &#x20;
+    *   `gqlRequestCompat.variables` &#x20;
 
 #### Examples
 
@@ -261,7 +261,7 @@ console.log(requestFromCompat({query, variables: {userId: 10}}));
 // {operation: "...", variables: {userId: 10}}
 ```
 
-Returns **GqlRequest\<Variables>** 
+Returns **GqlRequest\<Variables>**&#x20;
 
 ### requestToCompat
 
@@ -269,10 +269,10 @@ Creates a GqlRequest using given GqlRequestCompat
 
 #### Parameters
 
-*   `gqlRequest` **GqlRequest\<Variables>** 
+*   `gqlRequest` **GqlRequest\<Variables>**&#x20;
 
-    *   `gqlRequest.operation`  
-    *   `gqlRequest.variables`  
+    *   `gqlRequest.operation` &#x20;
+    *   `gqlRequest.variables` &#x20;
 
 #### Examples
 
@@ -290,7 +290,7 @@ console.log(requestToCompat({operation, variables: {userId: 10}}));
 // {query: "...", variables: {userId: 10}}
 ```
 
-Returns **GqlRequestCompat\<Variables>** 
+Returns **GqlRequestCompat\<Variables>**&#x20;
 
 ## License
 
