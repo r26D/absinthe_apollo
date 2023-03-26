@@ -1,9 +1,3 @@
-const locationsToString = (locations) =>
-  locations.map(({column, line}) => `${line}:${column}`).join("; ");
-
-const errorToString = ({message, locations}) =>
-  message + (locations ? ` (${locationsToString(locations)})` : "");
-
 /**
  * Transforms an array of GqlError into a string.
  *
@@ -21,7 +15,14 @@ const errorToString = ({message, locations}) =>
  * // First Error (2:10)
  * // Second Error (4:2)
  */
-const errorsToString = (gqlErrors                 )         =>
-  gqlErrors.map(errorToString).join("\n");
+const errorsToString = (gqlErrors) =>
+  gqlErrors.map(errorToString).join('\n')
 
-export default errorsToString;
+const locationsToString = (locations) =>
+  locations.map(({ column, line }) => `${line}:${column}`).join('; ')
+
+const errorToString = ({ message, locations }) =>
+  message + (locations ? ` (${locationsToString(locations)})` : '')
+
+
+export default errorsToString
