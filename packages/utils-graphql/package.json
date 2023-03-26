@@ -1,6 +1,6 @@
 {
   "name": "@r26d/utils-graphql",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "GraphQL utilities",
   "files": [
     "lib",
